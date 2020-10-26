@@ -1,0 +1,125 @@
+\documentclass{beamer}
+\usetheme{metropolis}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{tcolorbox}
+\title{Electromagnetc Theory: PHYS330}
+\author{Jordan Hanson}
+\institute{Whittier College Department of Physics and Astronomy}
+
+\begin{document}
+\maketitle
+
+\section{Summary}
+
+\begin{frame}{Summary}
+\begin{enumerate}
+\item Electromagnetism and the module system
+\begin{itemize}
+\item Pace
+\item Style
+\item Class decision
+\end{itemize}
+\item Challenge level: pre-requisites
+\begin{itemize}
+\item Passed Calculus 1, 2, and 3
+\item Passed Calculus-based physics 1, 2, and 3
+\item Passed modern physics
+\end{itemize}
+\item Maxwell's equations live in 3D
+\item \alert{Introduction to Electromagnetism by D. Griffiths (4th ed.)}
+\item First half of the text is recommended by publisher, retain for graduate school
+\item Asynchronous content: www.youtube.com/918particle, and Moodle in folders
+\end{enumerate}
+\end{frame}
+
+\section{Homework}
+
+\begin{frame}{Homework}
+\begin{enumerate}
+\item Reading: Chapter 1 by Friday/Saturday
+\item Exercises: 1.54, 1.55, 1.56, 1.57, 1.59, 1.62, 1.63, 1.64
+\end{enumerate}
+\end{frame}
+
+\section{Today: the Dirac delta-function}
+
+\begin{frame}{The Dirac $\delta$-function}
+Consider this function:
+\begin{equation}
+\vec{v} = \frac{1}{r^2}\hat{r}
+\end{equation}
+with $\vec{r} = x\hat{i} + y\hat{j} + z\hat{k}$.  What is the divergence?
+\begin{equation}
+\nabla \cdot \vec{v} = \frac{1}{r^2}\frac{\partial}{\partial r}(r^2 v_r) + \frac{1}{r\sin(\theta)}\frac{\partial}{\partial \theta}(r\sin(\theta) v_\theta) + \frac{1}{r\sin(\theta)} \frac{\partial v_\phi}{\partial \phi}
+\end{equation}
+\end{frame}
+
+\begin{frame}{The Dirac $\delta$-function}
+So we find the divergence is zero.  What is the result of a surface integral around the origin?
+\begin{equation}
+\oint \vec{v} \cdot d \vec{a} = \int_0^{2\pi} \int_0^{\pi} \left(\frac{\hat{r}}{R^2}\right) \cdot (R^2 \sin(\theta) d\theta d\phi \hat{r})
+\end{equation}
+\end{frame}
+
+\begin{frame}{The Dirac $\delta$-function}
+(Let $d\tau$ be the volume element).  Isn't the following \textit{always} supposed to be true?
+\begin{equation}
+\int (\nabla \cdot \vec{v}) d\tau = \oint \vec{v} \cdot d \vec{a}
+\end{equation}
+We must be dealing with a strange function...apparently all of the surface integral contribution comes from the origin, where the volume element is zero, but the function is infinite. \\ \vspace{0.2cm}
+Think of a function that has an finite \textit{integral} result, but is zero everywhere except one point.  Nothing comes to mind.
+\end{frame}
+
+\begin{frame}{The Dirac $\delta$-function}
+The Diract $\delta$-function:
+\begin{align}
+\delta(x) &= 0 ~~~ if~x\neq 0 \\
+\delta(x) &= \infty ~~~ if~x = 0
+\end{align}
+This function is called a \textit{distribution}, not a real function.  However, it has interesting properties:
+\begin{align}
+f(x) \delta(x) &= f(0) \delta(x) \\
+\int_{-\infty}^{\infty} \delta(x) dx &= 1 \\
+\int_{-\infty}^{\infty} f(x) \delta(x) dx &= f(0) \\
+\int_{-\infty}^{\infty} f(x) \delta(x-a) dx &= f(a)
+\end{align}
+\end{frame}
+
+\begin{frame}{The Dirac $\delta$-function}
+Show that
+\begin{equation}
+\delta(kx) = \frac{1}{|k|}\delta(x)
+\end{equation}
+\end{frame}
+
+\begin{frame}{One more interesting thing}
+What is this integral?
+\begin{equation}
+\int_0^{2\pi} \sin(nx)\sin(mx) dx
+\end{equation}
+\end{frame}
+
+\section{Conclusion}
+
+\begin{frame}{Summary}
+\begin{enumerate}
+\item Electromagnetism and the module system
+\begin{itemize}
+\item Pace
+\item Style
+\item Class decision
+\end{itemize}
+\item Challenge level: pre-requisites
+\begin{itemize}
+\item Passed Calculus 1, 2, and 3
+\item Passed Calculus-based physics 1, 2, and 3
+\item Passed modern physics
+\end{itemize}
+\item Maxwell's equations live in 3D
+\item \alert{Introduction to Electromagnetism by D. Griffiths (4th ed.)}
+\item First half of the text is recommended by publisher, retain for graduate school
+\end{enumerate}
+\end{frame}
+
+\end{document}
