@@ -72,7 +72,7 @@ Think of a function that has an finite \textit{integral} result, but is zero eve
 \end{frame}
 
 \begin{frame}{The Dirac $\delta$-function}
-The Diract $\delta$-function:
+The Dirac $\delta$-function:
 \begin{align}
 \delta(x) &= 0 ~~~ if~x\neq 0 \\
 \delta(x) &= \infty ~~~ if~x = 0
@@ -90,14 +90,160 @@ f(x) \delta(x) &= f(0) \delta(x) \\
 Show that
 \begin{equation}
 \delta(kx) = \frac{1}{|k|}\delta(x)
+\end{equation} \\ \vspace{2cm}
+Try it here:
+\begin{equation}
+\int_{-\infty}^{\infty} \cos(2kx) \delta(kx) dx = 
 \end{equation}
 \end{frame}
 
-\begin{frame}{One more interesting thing}
+\begin{frame}{Another interesting thing}
 What is this integral?
 \begin{equation}
 \int_0^{2\pi} \sin(nx)\sin(mx) dx
 \end{equation}
+\end{frame}
+
+\begin{frame}{The Dirac $\delta$-function}
+Generalize to three dimensions:
+\begin{align}
+\delta^3(\vec{r}) &= \delta(x) \delta(y) \delta(z) \\
+\int d\tau \delta^3(\vec{r}) &= 1 \\
+\int d\tau f(\vec{r})\delta^3(\vec{r}-\vec{a}) &= f(\vec{a})
+\end{align}
+Let $f(\vec{r}) = \cos^2(x) - \sin^2(y)$, and $\vec{a} = (0,1)$.  Evaluate:
+\begin{equation}
+\int d\tau f(\vec{r})\delta^3(\vec{r}-\vec{a}) = 
+\end{equation}
+\end{frame}
+
+\begin{frame}{The Dirac $\delta$-function}
+If the integral contains the origin:
+\begin{equation}
+\int \nabla \cdot \left(\frac{\hat{r}}{r^2}\right) d\tau = 4\pi
+\end{equation}
+Thus we know
+\begin{equation}
+\nabla \cdot \left(\frac{\hat{r}}{r^2}\right) =  4\pi \delta^3(\vec{r})
+\end{equation}
+One of Maxwell's Equations: $\nabla \cdot \vec{E} = \rho/\epsilon_0$.  This says the divergence of the E-field is charge density.  If the E-field goes like $1/r^2$, then we know it's like a point charge.  So the charge density of a point charge: $\delta^3(\vec{r})$.
+\end{frame}
+
+\section{Objects of Electromagnetism}
+
+\begin{frame}{Objects of Electromagnetism}
+What type of \textit{object} is $\vec{f}(x,y,z) \cdot \vec{g}(x,y,z)$?
+\begin{itemize}
+\item A: A scalar
+\item B: A pseudoscalar
+\item C: A vector
+\item D: A pseudovector
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Objects of Electromagnetism}
+What type of \textit{object} is $\vec{f}(x,y,z) \times \vec{g}(x,y,z)$?
+\begin{itemize}
+\item A: A scalar
+\item B: A pseudoscalar
+\item C: A vector
+\item D: A pseudovector
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Objects of Electromagnetism}
+What type of \textit{object} is $\vec{h}(x,y,z) \cdot (\vec{f}(x,y,z) \times \vec{g}(x,y,z))$?
+\begin{itemize}
+\item A: A scalar
+\item B: A pseudoscalar
+\item C: A vector
+\item D: A pseudovector
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Objects of Electromagnetism}
+What type of \textit{object} is $\nabla f(x,y,z)$?
+\begin{itemize}
+\item A: A scalar
+\item B: A pseudoscalar
+\item C: A vector
+\item D: A pseudovector
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Objects of Electromagnetism}
+What type of \textit{object} is $\frac{\partial f(x,y,z)}{\partial x}$?
+\begin{itemize}
+\item A: A scalar
+\item B: A pseudoscalar
+\item C: A vector
+\item D: A pseudovector
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Objects of Electromagnetism}
+What type of \textit{object} is $\nabla \cdot \vec{f}(x,y,z)$?
+\begin{itemize}
+\item A: A scalar
+\item B: A pseudoscalar
+\item C: A vector
+\item D: A pseudovector
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Objects of Electromagnetism}
+What type of \textit{object} is $\nabla \times \vec{f}(x,y,z)$?
+\begin{itemize}
+\item A: A scalar
+\item B: A pseudoscalar
+\item C: A vector
+\item D: A pseudovector
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Objects of Electromagnetism}
+What type of \textit{object} is $\nabla \cdot (\nabla f(x,y,z))$?
+\begin{itemize}
+\item A: A scalar
+\item B: A pseudoscalar
+\item C: A vector
+\item D: A pseudovector
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Objects of Electromagnetism}
+This object is the Laplacian of $f$:
+\begin{equation}
+\nabla \cdot (\nabla f(x,y,z)) = \nabla^2 f
+\end{equation}
+Of all the possible \textit{second derivatives} of the above objects this is the one we will encounter the most.  The rest are zero or less important (grad of divergence).  When you see a second derivative, think guilty until proven innocent, in EM.
+\end{frame}
+
+\section{Area Vectors and Surface Integrals}
+
+\begin{frame}{Area Vectors and Surface Integrals}
+Cartesian coordinates, six possibilities:
+\begin{align}
+d\vec{a} &= \pm dx dy \hat{z} \\
+d\vec{a} &= \pm dx dz \hat{y} \\
+d\vec{a} &= \pm dy dz \hat{x}
+\end{align}
+You must always determine the vector $d\vec{a}$ before completing a surface integral. 
+\end{frame}
+
+\begin{frame}{Area Vectors and Surface Integrals}
+\small
+Let $\vec{v} = 2xz \hat{i} + (x+2)\hat{j} + y(z^2-3)\hat{k}$.  Integrate $\vec{v}$ over the cube of side length 2 with one corner at the origin. (breakout rooms) \\ \vspace{6cm}
+\end{frame}
+
+\begin{frame}{Area Vectors and Surface Integrals}
+\small
+Let $\vec{v} = s(2+\sin^2(\phi))\hat{s} + s \sin(\phi)\cos(\phi)\hat{\phi} + 3 z \hat{z}$. (a) Find the divergence. \\ \vspace{6cm}
+\end{frame}
+
+\begin{frame}{Area Vectors and Surface Integrals}
+\small
+Let $\vec{v} = s(2+\sin^2(\phi))\hat{s} + s \sin(\phi)\cos(\phi)\hat{\phi} + 3 z \hat{z}$. (b) Test the divergence theorem using the quarter cylinder with radius 2 and height 5, the corner at the origin. \\ \vspace{6cm}
 \end{frame}
 
 \section{Conclusion}
