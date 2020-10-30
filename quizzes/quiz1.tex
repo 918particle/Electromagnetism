@@ -1,0 +1,53 @@
+\title{Reading Quiz 1 for Electromagnetic Theory (PHYS330)}
+\author{Dr. Jordan Hanson - Whittier College Dept. of Physics and Astronomy}
+\date{\today}
+\documentclass[10pt]{article}
+\usepackage[a4paper, total={18cm, 27cm}]{geometry}
+\usepackage{outlines}
+\usepackage{hyperref}
+\begin{document}
+\maketitle
+
+\begin{abstract}
+A summary of content covered in chapter 1 of Introduction to Electrodynamics. 
+\end{abstract}
+\noindent
+
+\section{Vectors and Scalars}
+
+\begin{enumerate}
+\item Prove that scalar multiplication distributes over vector addition: $a(\vec{B} + \vec{C}) = a\vec{B} + a\vec{C}$.  \textit{Hint: break into components.} \\ \vspace{1cm}
+\item What is wrong with this combination of objects?  $\nabla(f(x,y) + \nabla g(x,y))$ \\ \vspace{1cm}
+\item (a) Create a vector field that has zero curl.  (b) Perform the line integral with the unit circle in the xy-plane as the path.  Does the result make sense? (c) What is the divergence of your field? \\ \vspace{2.5cm}
+\end{enumerate}
+
+\section{Vector Rotations}
+
+\begin{enumerate}
+\item Imagine a Cartesian coordinate system (right-handed) with $\hat{x}$ right, $\hat{y}$ up, and $\hat{z}$ out of the page. (a) Define a vector in the xy-plane.  (b) Rotate the coordinate system \textit{about the z-axis} by 45 degrees, counter-clockwise.  What are the new components of your vector?  (c) Determine if it has the same magnitude (it should). \\ \vspace{3cm}
+\end{enumerate}
+
+\section{Fundamental Theorems}
+
+\begin{enumerate}
+\item \textbf{Stokes' Theorem}.  Let $\vec{v} = s^{-1} \hat{\phi}$ in cylindrical coordinates, where the three coordinates in the text are $(s,\phi,z)$.  What is the result of $\int_{S} (\nabla \times \vec{v}) \cdot d\vec{a}$, if the surface is the \textit{closed sphere} with radius 1, centered on the origin.  \textit{Hint: This problem is a trick...What happens when Stokes' Theorem gets a closed surface?  Don't overthink it!}
+\end{enumerate}
+
+\clearpage
+
+\section{Dirac Delta Functions}
+
+\begin{enumerate}
+\item Let
+\begin{equation}
+f(x) \star g(x) = \left(\frac{f(x) - g(x)}{f(x) + g(x)}\right)
+\end{equation}
+Evaluate $\int_{-\infty}^{\infty} (f(x) \star g(x)) \delta(x) dx$, if:
+\begin{itemize}
+\item $f(x) = \cos(x)$ and $g(x) = \sin(x)$.
+\item $f(x) = \cosh(x)$ and $g(x) = \sinh(x)$.
+\item $f(x) = a + ax + ax^2 + ...$, and $g(x) = b + bx + bx^2 + ...$
+\end{itemize}
+\end{enumerate}
+
+\end{document}
