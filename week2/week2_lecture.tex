@@ -3,6 +3,11 @@
 \usepackage{graphicx}
 \usepackage{amsmath}
 \usepackage{tcolorbox}
+
+\def\rcurs{{\mbox{$\resizebox{.16in}{.08in}{\includegraphics{ScriptR}}$}}}
+\def\brcurs{{\mbox{$\resizebox{.16in}{.08in}{\includegraphics{BoldR}}$}}}
+\def\hrcurs{{\mbox{$\hat \brcurs$}}}
+
 \title{Electromagnetc Theory: PHYS330}
 \author{Jordan Hanson}
 \institute{Whittier College Department of Physics and Astronomy}
@@ -75,6 +80,14 @@ Unlike last week, these exercises come from \textit{within} the chapter.  Ideall
 \begin{frame}{Charge distributions, Superposition, and the Coulomb Force}
 \begin{figure}
 \centering
+\includegraphics[width=10cm]{figures/2_13.jpg}
+\caption{\label{fig:2_13} Field of a \textit{physical} dipole.}
+\end{figure}
+\end{frame}
+
+\begin{frame}{Charge distributions, Superposition, and the Coulomb Force}
+\begin{figure}
+\centering
 \includegraphics[width=8cm]{figures/2_5.jpg}
 \caption{\label{fig:2_5} The continuous limit implies a variety of symmetries and geometries over which we integrate, rather than sum.}
 \end{figure}
@@ -87,5 +100,35 @@ Unlike last week, these exercises come from \textit{within} the chapter.  Ideall
 \caption{\label{fig:2_6} A coninuous line density of charge.  Integration yields the electric field.}
 \end{figure}
 \end{frame}
+
+\begin{frame}{Charge distributions, Superposition, and the Coulomb Force}
+\alert{Useful calculations:}
+\begin{enumerate}
+\item Continuous line charge, length $L$.
+\item Continuous plane of charge, radius $R$.
+\item Loop of charge, radius $R$, a distance $z$ above the center.
+\end{enumerate}
+Why are these interesting?  One example is that these shapes are used as \textit{antennas}.  Give some alternating current at the right voltage and impedance to a shape of metal, then you've got your antenna that radiates a certain way. \\ \vspace{1cm}
+\textbf{Professor do these examples.}\footnote{Remember from PHYS180? Remember? Yeah...good times.}
+\end{frame}
+
+\section{A Note about the Far-Field}
+
+\begin{frame}{The Far-Field}
+\small
+One way to express the \textbf{\alert{far-field}} approximation (compare to Fraunhofer and Fresnel limits in diffraction):
+\begin{align}
+\vec{r} &= \vec{r'} + \vec{\rcurs} \\
+\vec{\rcurs} &= \vec{r} - \vec{r'} \\
+\rcurs &= \sqrt{r^2 - 2 \vec{r} \cdot \vec{r'} + r'^2} \\
+\rcurs &= r\sqrt{1 - 2 \vec{r} \cdot \vec{r'} r^{-2} + r'^2 r^{-2}} \\
+\rcurs &\approx r\sqrt{1 - 2 \vec{r} \cdot \vec{r'} r^{-2}} \\
+\rcurs &\approx r\left(1 - \vec{r} \cdot \vec{r'} r^{-2}\right) \\
+\rcurs &\approx r\left(1 - \hat{r} \cdot \vec{r'} r^{-1}\right) \\
+\rcurs &\approx r - \hat{r} \cdot \vec{r'}
+\end{align}
+\end{frame}
+
+\section{The Divergence of $\vec{E}$-fields}
 
 \end{document}
