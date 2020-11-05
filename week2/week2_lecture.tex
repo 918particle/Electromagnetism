@@ -131,4 +131,84 @@ One way to express the \textbf{\alert{far-field}} approximation (compare to Frau
 
 \section{The Divergence of $\vec{E}$-fields}
 
+\begin{frame}{The Divergence of $\vec{E}$-fields}
+\begin{figure}
+\centering
+\includegraphics[width=5cm]{figures/2_13.jpg}
+\includegraphics[width=4cm]{figures/2_14.jpg}
+\caption{\label{fig:fieldLines} Field lines are an important theoretical concept.}
+\end{figure}
+\end{frame}
+
+\begin{frame}{The Divergence of $\vec{E}$-fields}
+\begin{figure}
+\centering
+\includegraphics[width=10cm]{figures/2_16.jpg}
+\caption{\label{fig:fieldLines2} The concept of a closed Gaussian surface.}
+\end{figure}
+\end{frame}
+
+\begin{frame}{The Divergence of $\vec{E}$-fields}
+\begin{equation}
+\boxed{
+\oint \vec{E_i} \cdot d\vec{a} = \frac{1}{4\pi \epsilon_0} \int_0^{\pi} \int_0^{2\pi} \frac{q_i\hat{r}}{r^2} \cdot r^2 \sin\theta d\theta d\phi \hat{r} = \frac{q_i}{\epsilon_0}
+}
+\end{equation}
+\begin{align}
+\vec{E} =& \sum_{i=1}^n \vec{E}_i \\
+\oint \vec{E} \cdot d\vec{a} =& \sum_{i=1}^n \left(\oint \vec{E}_i \cdot d\vec{a}\right) \\
+\oint \vec{E} \cdot d\vec{a} =& \sum_{i=1}^n \left( \frac{q_i}{\epsilon_0} \right) \\
+\oint \vec{E} \cdot d\vec{a} =& \frac{Q_{tot}}{\epsilon_0}
+\end{align}
+\alert{Gauss' Law: the total flux is proportional to the contained charge.}
+\end{frame}
+
+\begin{frame}{The Divergence of $\vec{E}$-fields}
+The divergence theorem:
+\begin{equation}
+\oint_{\mathcal{S}} \vec{E} \cdot d\vec{a} = \int_{\mathcal{V}} (\nabla \cdot \vec{E}) d\tau
+\end{equation}
+Remark that the total charge is the integral over the 3D charge density:
+\begin{equation}
+\frac{Q_{tot}}{\epsilon_0} = \frac{1}{\epsilon_0}\int_{\mathcal{V}} \rho d\tau
+\end{equation}
+This implies
+\begin{equation}
+\oint_{\mathcal{S}} \vec{E} \cdot d\vec{a} = \int_{\mathcal{V}} (\nabla \cdot \vec{E}) d\tau = \frac{1}{\epsilon_0}\int_{\mathcal{V}} \rho d\tau
+\end{equation}
+Looking at the last two expressions:
+\begin{equation}
+\boxed{
+\nabla \cdot \vec{E} = \frac{\rho}{\epsilon_0}
+}
+\end{equation}
+\end{frame}
+
+\begin{frame}{The Divergence of $\vec{E}$-fields}
+\textit{Differential form} of Gauss' Law:
+\begin{equation}
+\boxed{
+\nabla \cdot \vec{E} = \frac{\rho}{\epsilon_0}
+}
+\end{equation}
+Consider a different argument:
+\begin{align}
+\vec{E} =& \frac{1}{4\pi\epsilon_0} \int \frac{\hat{\hrcurs}}{\rcurs^2} \rho(\vec{r}') d\tau' \label{eq:E} \\
+\nabla \cdot \vec{E} =& \frac{1}{4\pi\epsilon_0} \int \nabla \cdot \left(\frac{\hat{\hrcurs}}{\rcurs^2} \right)\rho(\vec{r}') d\tau' \\
+\nabla \cdot \vec{E} =& \frac{1}{4\pi\epsilon_0} \int 4\pi \delta^3(\brcurs)\rho(\vec{r}') d\tau' \\
+\nabla \cdot \vec{E} =& \frac{4\pi}{4\pi\epsilon_0} \int \delta^3(\vec{r} - \vec{r}')\rho(\vec{r}') d\tau' \\
+\nabla \cdot \vec{E} =& \rho(\vec{r})/\epsilon_0
+\end{align}
+\end{frame}
+
+\begin{frame}{The Divergence of $\vec{E}$-fields}
+\small
+(Refresh with delta-functions): Use this charge distribution and Eq. \ref{eq:E} to find the $\vec{E}$-field.
+\begin{equation}
+\rho(\vec{r}') = q \delta^3(\vec{r}' - x\hat{x}) - q \delta^3(\vec{r}' + x\hat{x})
+\end{equation} 
+\vspace{7cm}
+
+\end{frame}
+
 \end{document}
