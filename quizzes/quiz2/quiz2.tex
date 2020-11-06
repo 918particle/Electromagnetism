@@ -1,0 +1,64 @@
+\title{Reading Quiz 2 for Electromagnetic Theory (PHYS330)}
+\author{Dr. Jordan Hanson - Whittier College Dept. of Physics and Astronomy}
+\date{\today}
+\documentclass[10pt]{article}
+\usepackage[a4paper, total={18cm, 27cm}]{geometry}
+\usepackage{outlines}
+\usepackage{hyperref}
+\begin{document}
+\maketitle
+
+\begin{abstract}
+A summary of content covered in chapter 2 of Introduction to Electrodynamics. 
+\end{abstract}
+\noindent
+
+\section{Distributions of Point Charges}
+
+\begin{enumerate}
+\item Picture a \textit{physical dipole} of two charges $+q$ and $-q$ of equal magnitude, separated by a distance $d$.  Define the dipole moment as $\vec{p} = q\vec{d}$ pointing from $-q$ to $q$ somewhere in the xy-plane.  Now add an external electric field $\vec{E} = E_0 \hat{x}$.  Show that the \textit{torque} on the dipole is 
+\begin{equation}
+\vec{\tau} = \vec{p} \times \vec{E}
+\end{equation} \\ \vspace{3cm}
+\item Imagine two dipoles, each with dipole moments $\vec{p}_1$ and $\vec{p}_2$ pointed in opposite directions, forming a square with alternating positive and negative charges.  Calculate the electric field vector in the center of the square. \\ \vspace{3cm}
+\end{enumerate}
+
+\section{Continuous Charge Distributions}
+
+\begin{enumerate}
+\item (a) Compute the electric field of a continuous line of charge, with total charge $Q = \lambda L$, where $\lambda$ is the charge density and $L$ is the total length.  Take the field point to be a distance $z$ above the center of the line of charge.  Show what happens in the limit that $L \gg z$. (b) Obtain the same result as (a) using Gauss' Law. \\ \vspace{5cm}
+\item Assuming a plane of charge with charge density (Coulombs per unit area) $\sigma$ has an electric field $\sigma/(2\epsilon_0)$, what electric fields would occur in each of the following situations:
+\begin{itemize}
+\item Two planes of positive charge, and the field point is somewhere between the plates.
+\item Two planes of charge, one positive and one negative, and the field point is somewhere between the plates.
+\item Two planes of positive charge, one occupying the yz-plane, and the other occupying the xz-plane, and the field point is $(1,1,0)$.
+\end{itemize}
+\vspace{3cm}
+\end{enumerate}
+
+\section{The Curl of $\vec{E}$-fields}
+
+\begin{enumerate}
+\item According to Eq. 2.19 in the text, the close loop line integral for the E-field of a point charge is 
+\begin{equation}
+\oint \vec{E} \cdot d\vec{l} = 0
+\end{equation}
+This implies $\nabla \times \vec{E} = 0$.  According to the Helmholtz theorem in Ch. 1, this means the $\vec{E}$-field can be cast as the gradient of a scalar function known as \textit{the potential, $V$}:
+\begin{equation}
+\vec{E} = -\nabla V
+\end{equation}
+The minus sign is a convention that is analogous to the minus sign in $\vec{F} = - \frac{dU}{dx} \hat{x}$ from mechanics.
+\begin{itemize}
+\item Show that 
+\begin{equation}
+- \int_a^{B} \vec{E} \cdot d\vec{l} = V(\vec{b}) - V(\vec{a})
+\end{equation}
+\item Assume a point charge at the origin, and label its electric field $\vec{E}$.  Perform the integral
+\begin{equation}
+V(\vec{r}) = - \int_{\infty}^{r} E(r') dr'
+\end{equation}
+to find the potential formula for a point charge. \textit{[Answer: $kq/r$]}
+\end{itemize}
+\end{enumerate}
+
+\end{document}
