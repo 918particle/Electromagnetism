@@ -1,0 +1,14 @@
+Eliot Bergerson, Homework 1.
+
+1.54: I see the volume integral being done right, but not the surface integral (-1/2)
+1.55: All correct except there was an extraneous factor of (1/2), both sides should be equal (-1/2)
+1.56: correct
+1.57: I see the line integral done right, but not the surface integral (-1/2)
+1.59: I see the volume integral done right, but not the surface integral (-1/2)
+1.62: correct
+1.63: correct
+1.64: correct
+
+Final Score: 14/16
+
+Well done!

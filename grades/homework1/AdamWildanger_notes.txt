@@ -1,0 +1,14 @@
+Adam Wildanger, Homework 1.
+
+1.54: correct
+1.55: correct
+1.56: haha close enough, 7/3 vs. 8/3
+1.57: This exercise was attempted but not yet completed (-1)
+1.59: I see the divergence volume integral, but not the surface integral (-1)
+1.62: For part (a), the area element has units of volume. Same idea for part (b) but it's still zero.  For part (c) picture any two surfaces joined into a closed surface by the same boundary...hint hint (-1)
+1.63: (-2)
+1.64: (-2)
+
+Final Score: 9/16
+
+Keep after it...I know you can get it all done.  Let's put a pin in some of these and circle back.

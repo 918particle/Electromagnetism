@@ -1,0 +1,14 @@
+Danny Diaz, Homework 1.
+
+1.54: correct
+1.55: correct
+1.56: correct
+1.57: correct
+1.59: correct
+1.62: correct
+1.63: correct
+1.64: For part (c), it's also because there's an epsilon in the numerator, but yeah.
+
+Final Score: 16/16
+
+Perfecto!

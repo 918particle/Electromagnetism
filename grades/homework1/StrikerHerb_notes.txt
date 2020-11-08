@@ -1,0 +1,14 @@
+Striker Herb, Homework 1.
+
+1.54: I see the volume integral done correctly, but I don't see the surface integral (-1/2)
+1.55: correct
+1.56: I see the line integral, but I don't see the surface integral (-1/2)
+1.57: I see the line integral, but I don't see the surface integral (-1/2)
+1.59: I see the volume integral, but I don't see the surface integral (-1/2)
+1.62: For part (e) I don't see the proof completed, but I do see the usage of the result from 1.61
+1.63: correct
+1.64: correct
+
+Final Score: 14/16
+
+Well done!

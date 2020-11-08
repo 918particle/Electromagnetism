@@ -1,0 +1,14 @@
+David Del Carmen, Homework 1.
+
+1.54: There was a math error with the divergence.  Otherwise you would have got it right (-1/2)
+1.55: The curl is computed correctly, but the integrals checking Stokes' theorem are missing (-1)
+1.56: correct
+1.57: looks like this problem was attempted several times but the path parameterization was the hard part (-1)
+1.59: The diverence theorem does not involve the curl... (-1)
+1.62: (-2) problem not attempted
+1.63: No delta function at the origin because the answer is finite, also there's a math error with the divergence.  The curl portion was done correctly. (-1)
+1.64: Looks like the problem was attempted but not completed (-1)
+
+Final Score: 10.5/16
+
+Let's work some of these together in office hours, shall we?
