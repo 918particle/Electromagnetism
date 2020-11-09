@@ -129,6 +129,11 @@ One way to express the \textbf{\alert{far-field}} approximation (compare to Frau
 \end{align}
 \end{frame}
 
+\begin{frame}{The Far-Field}
+\small
+\alert{\textbf{Repeat the charged loop calculation}}, but replace $\rcurs \approx r - \hat{r} \cdot \vec{r'}$ at the outset.  What happens? \\ \vspace{8cm}
+\end{frame}
+
 \section{The Divergence of $\vec{E}$-fields}
 
 \begin{frame}{The Divergence of $\vec{E}$-fields}
@@ -193,7 +198,7 @@ Looking at the last two expressions:
 \end{equation}
 Consider a different argument:
 \begin{align}
-\vec{E} =& \frac{1}{4\pi\epsilon_0} \int \frac{\hat{\hrcurs}}{\rcurs^2} \rho(\vec{r}') d\tau' \label{eq:E} \\
+\vec{E} =& \frac{1}{4\pi\epsilon_0} \int \frac{\hrcurs}{\rcurs^2} \rho(\vec{r}') d\tau' \label{eq:E} \\
 \nabla \cdot \vec{E} =& \frac{1}{4\pi\epsilon_0} \int \nabla \cdot \left(\frac{\hat{\hrcurs}}{\rcurs^2} \right)\rho(\vec{r}') d\tau' \\
 \nabla \cdot \vec{E} =& \frac{1}{4\pi\epsilon_0} \int 4\pi \delta^3(\brcurs)\rho(\vec{r}') d\tau' \\
 \nabla \cdot \vec{E} =& \frac{4\pi}{4\pi\epsilon_0} \int \delta^3(\vec{r} - \vec{r}')\rho(\vec{r}') d\tau' \\
@@ -208,7 +213,150 @@ Consider a different argument:
 \rho(\vec{r}') = q \delta^3(\vec{r}' - x\hat{x}) - q \delta^3(\vec{r}' + x\hat{x})
 \end{equation} 
 \vspace{7cm}
+\end{frame}
 
+\begin{frame}{The Divergence of $\vec{E}$-fields}
+\textbf{\alert{Symmetry in the Application of Gauss' Law}}: \\
+If the E-field and the area element are \textit{always} orthogonal,
+\begin{align}
+\oint \vec{E} \cdot d\vec{a} =& \frac{Q_{tot}}{\epsilon_0} \\
+|\vec{E}| A =& \frac{Q_{tot}}{\epsilon_0} \\
+\vec{E} =& \frac{Q_{tot}}{\epsilon_0 A} \hat{n}
+\end{align}
+This trick can be used even when the charge distribution is not uniform, but \textit{does exhibit} symmetry.
+\end{frame}
+
+\begin{frame}{The Divergence of $\vec{E}$-fields}
+\begin{figure}
+\centering
+\includegraphics[width=7cm]{figures/2_21.jpg}
+\caption{\label{fig:cyl} Use cylindrical symmetry to apply Gauss' Law.  The charge distribution function is $\rho(s) = ks$.  Obtain the field (a) \textit{inside} the object, then (b) outside the object.}
+\end{figure}
+\end{frame}
+
+\begin{frame}{The Divergence of $\vec{E}$-fields}
+\begin{figure}
+\centering
+\includegraphics[width=7cm]{figures/2_22.jpg}
+\caption{\label{fig:cyl2} Use Cartesian symmetry to apply Gauss' Law.  The charge distribution function is $\rho(x,y) = +\sigma$.  Obtain the field above (or below) the charged plane.}
+\end{figure}
+\end{frame}
+
+\begin{frame}{The Divergence of $\vec{E}$-fields}
+\begin{figure}
+\centering
+\includegraphics[width=5cm]{figures/2_23.jpg}
+\caption{\label{fig:cyl3} Combinations of ``Gaussian charged objects.''  What about the field between two line charges?}
+\end{figure}
+\end{frame}
+
+\section{The Curl of $\vec{E}$-fields}
+
+\begin{frame}{The Curl of $\vec{E}$-fields}
+The $\vec{E}$-field of a point charge at the origin ($\vec{r}' = 0$), and the line element in spherical coordinates:
+\begin{align}
+\vec{E} &= \frac{1}{4\pi\epsilon_0} \frac{q}{r^2} \hat{r} \\
+d\vec{l} &= dr\hat{r} + rd\theta \hat{\theta} + r\sin\theta d\phi \hat{\phi} \\
+\vec{E} \cdot d\vec{l} &= \frac{1}{4\pi\epsilon_0} \frac{q}{r^2} dr \\
+\int_{\vec{a}}^{\vec{b}} \vec{E} \cdot d\vec{l} &= \frac{q}{4\pi\epsilon_0} \left(\frac{1}{r_a} - \frac{1}{r_b} \right) \\
+\oint \vec{E} \cdot d\vec{l} &=  0 ~~ (\vec{a} = \vec{b}) \\
+\nabla \times \vec{E} &= 0
+\end{align}
+Any combination of point charges will also lead to zero curl.  Why?  Superposition.
+\end{frame}
+
+\begin{frame}{The Curl of $\vec{E}$-fields}
+\small
+Define a function, then, that encapsulates \textit{path-independence}:
+\begin{equation}
+V(\vec{r}) = -\int_{\mathcal{O}}^{\vec{r}} \vec{E} \cdot d\vec{l}
+\end{equation}
+\begin{itemize}
+\item $\mathcal{O}$ is a reference point, naturally taken to be $\infty$ (far from origin)
+\item $V(\vec{b}) - V(\vec{a}) = -\int_{\vec{a}}^{\vec{b}} \vec{E} \cdot d\vec{l}$
+\item $0 = V(\vec{a}) - V(\vec{a}) = -\oint \vec{E} \cdot d\vec{l} = 0$
+\end{itemize}
+Fundamental theorem for gradients:
+\begin{align}
+V(\vec{b}) - V(\vec{a}) &= \int_{\vec{a}}^{\vec{b}} \nabla V \cdot d\vec{l} = -\int_{\vec{a}}^{\vec{b}} \vec{E} \cdot d\vec{l} \\
+\vec{E} &= -\nabla V
+\end{align}
+\end{frame}
+
+\begin{frame}{The Curl of $\vec{E}$-fields}
+\small
+Path independence:
+\begin{figure}
+\centering
+\includegraphics[width=4.5cm]{figures/2_30.jpg}
+\caption{\label{fig:path1} If the line integral was not path-independent, then path i minus path ii would not be zero.  Path i and ii form a closed line integral.}
+\end{figure}
+\end{frame}
+
+\begin{frame}{The Curl of $\vec{E}$-fields}
+\small
+Two more ideas:
+\begin{align}
+\vec{E} &= -\nabla V \\
+\nabla \cdot \vec{E} &= - \nabla^2 V \\
+\nabla^2 V &= -\frac{\rho}{\epsilon_0} \label{eq:pois}
+\end{align}
+Equation \ref{eq:pois} is known as the \textit{Poisson Equation}.  If $\rho = 0$ in some region:
+\begin{equation}
+\boxed{
+\nabla^2 V = 0 \label{eq:laplace}
+}
+\end{equation}
+Equation \ref{eq:laplace} is known as the Laplacian of the potential or Laplace's Equation.  Solving it is the subject of Ch. 3.
+\end{frame}
+
+\begin{frame}{The Curl of $\vec{E}$-fields}
+Show that the potential of a point charge $q$ at the origin is
+\begin{equation}
+V(r) = \frac{1}{4\pi\epsilon_0} \frac{q}{r}
+\end{equation}
+Indeed, collections of point charges lead to 
+\begin{equation}
+V(r) = \frac{1}{4\pi\epsilon_0} \sum_i \frac{q_i}{\rcurs_i}
+\end{equation}
+A collection of \textit{many} point charges smoothed into a continuous distribution leads to
+\begin{equation}
+V(r) = \frac{1}{4\pi\epsilon_0} \int \frac{dq}{\rcurs} = \frac{1}{4\pi\epsilon_0} \int \frac{\rho' d\tau'}{\rcurs}
+\end{equation}
+\end{frame}
+
+\begin{frame}{The Curl of $\vec{E}$-fields}
+\begin{equation}
+V(r) = \frac{1}{4\pi\epsilon_0} \int \frac{\rho' d\tau'}{\rcurs}
+\end{equation}
+(a) Derive the potential due to a line charge of length $L$, directly above the center of the line. (b) Take the gradient in cylindrical coordinates to obtain $\vec{E}$. \\ \vspace{6cm}
+\end{frame}
+
+\section{Conclusion}
+
+\begin{frame}{Week 2 Summary}
+\begin{enumerate}
+\item Homework discussions
+\begin{itemize}
+\item Proofs!  Glorious proofs.
+\item Exercises with \textit{checking} fundamental theorems
+\end{itemize}
+\item Electrostatics and Coulomb forces
+\begin{itemize}
+\item Charge distributions, superposition, and the Coulomb force
+\item A note about the \textit{far-field}
+\item Setting up integrals, taking limits, checking units
+\item The divergence of electric fields
+\item The curl of electric fields
+\end{itemize}
+\item Electric Potential
+\begin{itemize}
+\item Definitions, fundamental theorem for gradients
+\item Reference points
+\item Laplace equation ...
+\end{itemize}
+\item Work, energy, and conductors
+\end{enumerate}
 \end{frame}
 
 \end{document}
