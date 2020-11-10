@@ -332,6 +332,99 @@ V(r) = \frac{1}{4\pi\epsilon_0} \int \frac{\rho' d\tau'}{\rcurs}
 (a) Derive the potential due to a line charge of length $L$, directly above the center of the line. (b) Take the gradient in cylindrical coordinates to obtain $\vec{E}$. \\ \vspace{6cm}
 \end{frame}
 
+\section{Brief Remark about Boundary Conditions}
+
+\begin{frame}{Boundary Conditions}
+\begin{figure}
+\centering
+\includegraphics[width=4cm]{figures/2_36.jpg}
+\includegraphics[width=4cm]{figures/2_37.jpg}
+\caption{\label{fig:bound} (Left) By Gauss' Law, we may find the discontinuity in the orthogonal E-field component. (Right) Via a closed-loop line integral, we may find that the parallel component of the E-field is continuous.}
+\end{figure}
+\begin{align}
+\left(\nabla V_{top} - \nabla V_{bottom}\right) \cdot \hat{n} &= -\frac{\sigma}{\epsilon_0} \\
+\left(\nabla V_{top} - \nabla V_{bottom}\right) \cdot \hat{s} &= 0
+\end{align}
+\end{frame}
+
+\begin{frame}{Boundary Conditions}
+Which of the following functions has a discontinuity \textit{in the derivative} but not the function itself, at $x = 0$?
+\begin{itemize}
+\item A: $\tan(x)$
+\item B: $|x| = abs(x)$
+\item C: $\sqrt{x}$
+\item D: $\theta(x)$ (Heaviside step-function)
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Boundary Conditions}
+\alert{Consult your notes regarding the charge distribution with spherical symmetry}.
+\begin{itemize}
+\item What was the formula for the electric field as a function of $r$, when $r<R$?
+\item What is the correct formula for the electric field as a function of $r$, when $r\geq R$? (\textit{Think of Gauss' Law}).
+\item What is the voltage just outside the radius $R$?
+\item What is the voltage just inside the radius $R$?
+\end{itemize}
+\end{frame}
+
+\section{Energy and Work}
+
+\begin{frame}{Energy and Work}
+The work required to assemble point charges by bring each in from infinity is 
+\begin{equation}
+W = \frac{1}{2}\sum_{i=1}^n q_i \left( \sum_{j\neq i}^{n} \frac{1}{4\pi\epsilon_0} \frac{q_j}{\rcurs_{ij}}\right)
+\end{equation}
+The parentheses contains the potential due to all charges except $q_i$:
+\begin{equation}
+W = \frac{1}{2}\sum_{i=1}^n q_i V(\vec{\rcurs}_i)
+\end{equation}
+Note that it doesn't matter when charge $q_i$ arrived; we have to pay for the energy used to keep $q_i$ there as everyone else arrives as well.
+\end{frame}
+
+\begin{frame}{Energy and Work}
+Continuous limit:
+\begin{equation}
+\boxed{
+W = \frac{1}{2} \int \rho(r') V(r') d\tau'
+}
+\end{equation}
+This result can be re-written:
+\begin{equation}
+W = \frac{\epsilon_0}{2} \left\lbrace -\int \vec{E} \cdot (\nabla V) d\tau + \oint V \vec{E} \cdot d\vec{a} \right \rbrace
+\end{equation}
+Like any integration by parts, there is an integral term and a surface term (the second term).  Use $-\vec{E} = \nabla V$, and expand the Gaussian surface so far that all contributions from the second term vanish:
+\begin{equation}
+W = \frac{\epsilon_0}{2} \int E^2 d\tau
+\end{equation}
+\end{frame}
+
+\begin{frame}{Energy and Work}
+Since we do not specify the shape of the volume, we can speak about the \textit{energy per unit volume}:
+\begin{equation}
+\boxed{
+u_E = \frac{\epsilon_0}{2}E^2
+}
+\end{equation}
+\begin{itemize}
+\item E-fields contain energy
+\item This equation is valid even if E-field values vary in space (of course)
+\item Consider the simple example of a capacitor ...
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Energy and Work}
+Start with the E-field inside a parallel-plate capacitor:
+\begin{align}
+E &= \frac{\sigma}{\epsilon_0} \\
+u_E &= \frac{1}{2\epsilon_0}\sigma^2 \\
+\mathcal{E} &= \frac{Ad}{2\epsilon_0}\sigma^2 \\
+\sigma &= \frac{Q}{A} \\
+C &= \frac{\epsilon_0 A}{d} \\
+\mathcal{E} &= \frac{1}{2} \frac{Q^2}{C} = \frac{1}{2}C V^2 = U
+\end{align}
+Energy conservation.
+\end{frame}
+
 \section{Conclusion}
 
 \begin{frame}{Week 2 Summary}
