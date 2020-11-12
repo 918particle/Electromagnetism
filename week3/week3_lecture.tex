@@ -76,6 +76,190 @@ Suppose the negative side of the parallel plate capacitor is grounded, and the p
 Show that the potential of a point charge at the origin satisfies Laplace's Equation for $r\neq 0$.  \textit{Use the form of the Laplacian in spherical coordinates.}\\ \vspace{6cm}
 \end{frame}
 
+\section{Boundary Conditions}
+
+\begin{frame}{Boundary Conditions}
+Let $V(x) = m x + b$.  If $V(-a) = V_0$, and $V(a) = -V_0$, what are valid expressions for $m$ and $b$?
+\begin{itemize}
+\item A: $b = 0$, and $m = -2V_0$
+\item B: $b = a$, and $m = V_0/a$
+\item C: $b = 0$, and $m = -V_0/a$
+\item D: $b = V_0$, and $m = -V_0/a$
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Boundary Conditions}
+Let $V(x) = m x + b$.  If $V(-a) = V_0$, and $V(a) = -V_0$, what is the electric field?
+\begin{itemize}
+\item A: $\frac{V_0}{a} \hat{x}$
+\item B: $-\frac{V_0}{a} \hat{x}$
+\item C: $V_0 \hat{x}$
+\item D: $-V_0 \hat{x}$
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Boundary Conditions}
+Suppose a potential function $V(x,y) \propto \left(A\exp(-kx) + B\exp(kx)\right)$.  Which of the following is true, if $V \to 0$ as $x \to \infty$?
+\begin{itemize}
+\item A: $A$ is 0
+\item B: $A$ is 0
+\item C: $A$ and $B$ are 0
+\item D: Neither $A$ nor $B$ is 0
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Boundary Conditions}
+Suppose a potential function $V(x,y) \propto \left(A\sin(kx) + B\cos(kx)\right)$.  Which of the following is true, if $V = 0$ as $x = 0$, and $V = 0$ as $x = a$?
+\begin{itemize}
+\item A: $B$ is 0, and $k = n\pi$
+\item B: $A$ is 0, and $k = n\pi/(2a)$
+\item C: $A$ and $B$ are 0
+\item D: $B$ is 0, and $k = n\pi/a$
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Boundary Conditions}
+\begin{columns}[T]
+\begin{column}{0.5\textwidth}
+Hyperbolic trigonometric functions:
+\begin{itemize}
+\item $\sinh(x) = \frac{1}{2}\left( e^{x} - e^{-x} \right)$
+\item $\cosh(x) = \frac{1}{2}\left( e^{x} + e^{-x} \right)$
+\item $\tanh(x) = \frac{\sinh(x)}{\cosh(x)}$
+\end{itemize} \vspace{0.5cm}
+Which of the following is zero?
+\begin{itemize}
+\item A: $\sinh(0)$
+\item B: $\cosh(0)$
+\item C: $\tanh(0)$
+\item D: None
+\end{itemize}
+\end{column}
+\begin{column}{0.5\textwidth}
+Which of the following is one?
+\begin{itemize}
+\item A: $\sinh(0)$
+\item B: $\cosh(0)$
+\item C: $\tanh(0)$
+\item D: None
+\end{itemize}
+Hyperbolic trigonometric functions are solutions to which equation?
+\begin{itemize}
+\item A: $\frac{df}{dx} = k$
+\item B: $\frac{d^2f}{dx^2} = kx$
+\item C: $\frac{d^2f}{dx^2} = k^2f$
+\item D: $\frac{d^2f}{dx^2} = 0$
+\end{itemize}
+\end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}{Boundary Conditions}
+\alert{\textbf{Fourier's Trick}}: Imagine a vector with $n$ components:
+\begin{equation}
+\vec{v} = \sum_{i = 1}^n c_n \hat{x}_i
+\end{equation}
+In words, how do you solve for some $c_m$?
+\begin{itemize}
+\item A: Divide by $\hat{x}_i$
+\item B: Take the dot product of both sides with $\hat{x}_{m}$
+\item C: Take the dot product $\vec{v}$ and $\vec{u}$, and the sum the series
+\item D: Integrate both sides with respect to $x$
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Boundary Conditions}
+\alert{\textbf{Fourier's Trick}}: Imagine a vector with $n$ components:
+\begin{equation}
+\vec{v} = \sum_{i = 1}^n c_n \hat{x}_i
+\end{equation}
+In words, how do you solve for some $c_m$? Note that:
+\begin{equation}
+\vec{v} \cdot \hat{x}_m = \sum_{i = 1}^n c_n \hat{x}_i \cdot \hat{x}_m = c_m
+\end{equation}
+Why?  Because
+\begin{align}
+\hat{x}_i \cdot \hat{x}_j &= 0 \\
+\hat{x}_i \cdot \hat{x}_i &= 1
+\end{align}
+\end{frame}
+
+\begin{frame}{Boundary Conditions}
+\alert{\textbf{Fourier's Trick}}: Imagine a known function that happens to be equal to a sum:
+\begin{equation}
+f(x) = \sum_{i = 1}^{\infty} c_n g_n(x)
+\end{equation}
+In words, how do you solve for some $c_m$?
+\begin{itemize}
+\item A: Multiply both sides by $g_m(x)$
+\item B: Multiply both sides by $g_m(x)$ and integrate both sides with respect to $x$
+\item C: Sum the infinite series and solve for $c_m$ with algebra
+\item D: Integrate both sides with respect to $x$
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Boundary Conditions}
+If it's true that a function can be written as an infinite series of functions with coefficients:
+\begin{equation}
+f(x) = \sum_{i = 1}^{\infty} c_n g_n(x)
+\end{equation}
+Then the functions $g_n(x)$ are said to be \textbf{\alert{complete}}, or a complete basis (just like vectors are a sum of basis vectors. Examples of complete sets of functions:
+\begin{itemize}
+\item sines and cosines (Fourier series) with the right frequencies
+\item exponentials with the right rates multiplying $x$
+\item Hyperbolic trigonometric functions (follows from exponentials)
+\item Taylor series (polynomials with special coefficients: derivatives).
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Boundary Conditions}
+The functions $g_n(x)$ are said to be \textbf{\alert{orthogonal}} if
+\begin{equation}
+\int_0^a f_n(y) f_m(y) dy = \delta_{n,m}0
+\end{equation}
+One example:
+\begin{equation}
+I_{n,m} = \int_L^{-L} \frac{\sin(n\pi x/L)}{\sqrt{L}}\frac{\sin(m\pi x/L)}{\sqrt{L}} dx
+\end{equation}
+What is the result of this integral?  How would you approach solving this?
+\end{frame}
+
+\begin{frame}{Boundary Conditions}
+The \alert{\textbf{Fourier series}} representation of a function $f(x)$ is written:
+\begin{equation}
+S(x) = \frac{A_0}{2}+\sum_{i=1}^{\infty} \left( A_n \cos(nx) + B_n \sin(nx) \right)
+\end{equation}
+with
+\begin{align}
+A_n &= \frac{1}{\pi} \int_0^{2\pi} f(x) \cos(nx) dx \\
+B_n &= \frac{1}{\pi} \int_0^{2\pi} f(x) \sin(nx) dx
+\end{align}
+\end{frame}
+
+\begin{frame}{Boundary Conditions}
+Let's obtain the \alert{\textbf{Fourier series}} coefficients $A_n$ and $B_n$ for a square-wave signal:
+\begin{equation}
+f(x) = 1, ~~ 0 \leq x \leq \pi, ~~ 0,  \pi < x \leq 2\pi 
+\end{equation}
+(Observe on board).  The result: $A_0 = 1.0$, all other $A_n = 0$, odd $B_n$ values follow $2/(n\pi)$, even $B_n = 0$ as well. \\ \vspace{0.5cm}
+Create octave code that plots this (see Moodle for example).  Initially, plot a solution that has the first 5 coefficients. \\ \vspace{0.5cm}
+\alert{Plot a solution with the first 20 coefficients.}  \textit{Hint: can you find how to use the for-loop in octave?}
+\end{frame}
+
+\section{Separation of Variables}
+
+\begin{frame}{Separation of Variables}
+Laplaces' Equation:
+\begin{equation}
+\frac{\partial^2 V}{\partial x^2} + \frac{\partial^2 V}{\partial y^2} + \frac{\partial^2 V}{\partial z^2} = 0
+\end{equation}
+Assume the solution follows
+\begin{equation}
+V(x,y,z) = X(x) Y(y) Z(z)
+\end{equation}
+Laplaces' equation then breaks into three separate ordinary differential equations. Application of boundary conditions to solve them (Asynchronous video content on Moodle).
+\end{frame}
+
 \section{Conclusion}
 
 \begin{frame}{Week 3 Summary}
