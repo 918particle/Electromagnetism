@@ -1,0 +1,59 @@
+\title{Reading Quiz 3 for Electromagnetic Theory (PHYS330)}
+\author{Dr. Jordan Hanson - Whittier College Dept. of Physics and Astronomy}
+\date{\today}
+\documentclass[10pt]{article}
+\usepackage[a4paper, total={18cm, 27cm}]{geometry}
+\usepackage{outlines}
+\usepackage{hyperref}
+\begin{document}
+\maketitle
+
+\begin{abstract}
+A summary of content covered in chapter 3 (so far) of Introduction to Electrodynamics. 
+\end{abstract}
+\noindent
+
+\section{Discussions about Vectors (Prelude to Fourier's Trick)}
+
+\begin{enumerate}
+\item Let $\vec{v} = a \hat{x} + b \hat{y} + c \hat{z}$.  Which of the following is equal to $c$?
+\begin{itemize}
+\item A: $\vec{v} \cdot \vec{v} - |\vec{v}|$
+\item B: $\vec{v} \cdot \hat{z}$
+\item C: $\hat{x} \cdot \vec{v}$
+\item D: $\sqrt{\vec{v}^2}$
+\end{itemize}
+
+\item Let $\vec{x} = \sum_{i=1}^n c_i \hat{x}_i$ be an $n$-dimensional vector and the set of $\hat{x}_i$ represent orthonormal basis vectors.  How do you obtain the coefficient $c_7$?
+\begin{itemize}
+\item A: $\hat{x}_i \cdot \vec{x}$
+\item B: $n = 7$
+\item C: $\hat{x} \cdot \vec{x}$
+\item D: $\hat{x}_7 \cdot \vec{x}$
+\end{itemize}
+
+\item Suppose we are trying to develop the Fourier series for a function $f(x)$.  Recall the definition of a Fourier series:
+\begin{equation}
+f(x) = \frac{a_0}{2} + \sum_{n=1}^{\infty} a_n \sin(nx) + b_n \cos(nx)
+\end{equation}
+However, the function we are trying to model is $f(x) = \sin(3x)$.  Write down all coefficients in the Fourier series from $n=0$ to $n = \infty$. \\ \vspace{1cm}
+\end{enumerate}
+
+\section{Fourier's Trick and Boundary Value Problems}
+
+\begin{enumerate}
+\item If $V(x,y,z) \to 0$ as $y \to \infty$, which of the following cannot be part of the solution for $V(x,y,z)$?
+\begin{itemize}
+\item A: $Y(y) = e^{-ky}$
+\item B: $Y(y) = \sinh(x)$
+\item C: $Y(y) = 1/y^2$
+\item D: $Y(y) = e^{-ky^2}$
+\end{itemize}
+\item Below is Eq. 3.50 from section 3.3 of the text, with $V_0(y,z) = V_0$:
+\begin{equation}
+C_{n,m} = \frac{4V_0}{ab} \int_0^a \int_0^a \sin(n\pi y/a)\sin(n\pi z/a) dy dz
+\end{equation}
+Reproduce the result in Eq. 3.51 for $C_{n,m}$.
+\end{enumerate}
+
+\end{document}
