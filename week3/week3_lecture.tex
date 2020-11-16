@@ -241,9 +241,7 @@ Let's obtain the \alert{\textbf{Fourier series}} coefficients $A_n$ and $B_n$ fo
 \begin{equation}
 f(x) = 1, ~~ 0 \leq x \leq \pi, ~~ 0,  \pi < x \leq 2\pi 
 \end{equation}
-(Observe on board).  The result: $A_0 = 1.0$, all other $A_n = 0$, odd $B_n$ values follow $2/(n\pi)$, even $B_n = 0$ as well. \\ \vspace{0.5cm}
-Create octave code that plots this (see Moodle for example).  Initially, plot a solution that has the first 5 coefficients. \\ \vspace{0.5cm}
-\alert{Plot a solution with the first 20 coefficients.}  \textit{Hint: can you find how to use the for-loop in octave?}
+(Observe on board).  The result: $A_0 = 1.0$, all other $A_n = 0$, odd $B_n$ values follow $2/(n\pi)$, even $B_n = 0$ as well.
 \end{frame}
 
 \section{Separation of Variables}
@@ -257,7 +255,127 @@ Assume the solution follows
 \begin{equation}
 V(x,y,z) = X(x) Y(y) Z(z)
 \end{equation}
-Laplaces' equation then breaks into three separate ordinary differential equations. Application of boundary conditions to solve them (Asynchronous video content on Moodle).
+The Laplace equation then breaks into three separate ordinary differential equations. Application of boundary conditions to solve them (Asynchronous video content on Moodle).
+\end{frame}
+
+\begin{frame}{Separation of Variables}
+\small
+Laplaces' Equation in spherical coordinates:
+\begin{equation}
+\frac{1}{r^2}\frac{\partial}{\partial r} \left( r^2 \frac{\partial V}{\partial r}\right) + \frac{1}{r^2\sin\theta}\frac{\partial}{\partial \theta} \left( \sin\theta \frac{\partial V}{\partial \theta}\right) + \frac{1}{r^2\sin\theta}\left(\frac{\partial^2 V}{\partial \phi^2}\right) = 0 \label{eq:lap}
+\end{equation}
+Assuming \textit{azimuthal symmetry} means $V(r,\theta,\phi) = V(r,\theta)$ and $\partial V/ \partial \phi = 0$.  Thus, Eq. \ref{eq:lap} reduces and admits general solutions:
+\begin{equation}
+\frac{1}{r^2}\frac{\partial}{\partial r} \left( r^2 \frac{\partial V}{\partial r}\right) + \frac{1}{r^2\sin\theta}\frac{\partial}{\partial \theta} \left( \sin\theta \frac{\partial V}{\partial \theta}\right) = 0 \label{eq:lap2}
+\end{equation}
+Let the general solutions be separable:
+\begin{equation}
+V(r,\theta) = R(r) \Theta (\theta)
+\end{equation}
+\end{frame}
+
+\begin{frame}{Separation of Variables}
+The radial equation is
+\begin{equation}
+\frac{1}{R} \frac{d}{dr}\left(r^2 \frac{dR}{dr} \right) = l(l+1)
+\end{equation}
+Exercise: show that the solution is 
+\begin{equation}
+R(r) = A r^l + B r^{-(l+1)}
+\end{equation}
+(The derivative operator distributes over addition, so the two solutions can be checked separately, or together). \\ \vspace{0.5cm}
+\textbf{What are the units of $R(r)$?  What are the units of $A$ and $B$?}
+\end{frame}
+
+\begin{frame}{Separation of Variables}
+The radial equation is
+\begin{equation}
+\frac{1}{R} \frac{d}{dr}\left(r^2 \frac{dR}{dr} \right) = l(l+1)R(r)
+\end{equation}
+Exercise: show that the solution is 
+\begin{equation}
+R(r) = A r^l + B r^{-(l+1)}
+\end{equation}
+(The derivative operator distributes over addition, so the two solutions can be checked separately, or together). \\ \vspace{0.5cm}
+\textbf{What are the units of $R(r)$?  What are the units of $A$ and $B$?}
+\end{frame}
+
+\begin{frame}{Separation of Variables}
+The polar equation is
+\begin{equation}
+\frac{d}{d\theta}\left(\sin\theta \frac{d\Theta}{d\theta} \right) = -l(l+1)\sin\theta \Theta(\theta)
+\end{equation}
+The solutions are \alert{complete}, and \alert{orthogonal}, and known as Legendre polynomials:
+\begin{equation}
+\Theta(\theta) = P_l(\cos\theta)
+\end{equation}
+Defined by the \textit{Rodrigues formula}:
+\begin{equation}
+P_l(x) = \frac{1}{2^ll!} \left(\frac{d}{dx}\right)^l (x^2 -1)^l
+\end{equation}
+\end{frame}
+
+\begin{frame}{Separation of Variables}
+Exercise: show that 
+\begin{equation}
+P_3(x) = (5x^3 - 3x)/2
+\end{equation}
+\alert{\textbf{What is the result of the following integrals?}}
+\begin{align}
+I_1 &= \int_{-1}^{1} P_2(x) P_3(x) dx \\
+I_2 &= \int_{-1}^{1} P_3(x) P_3(x) dx
+\end{align}
+If the integer $l$ is \textit{even/odd}, the $l$-th order Legendre polynomial will be
+\begin{itemize}
+\item A: odd/even
+\item B: odd/odd
+\item C: even/even
+\item D: even/odd
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Separation of Variables}
+The general solution is a sum of individual solutions:
+\begin{equation}
+V(r,\theta) = \sum_{i = 0}^{\infty} \left( Ar^l + B/r^{l+1} \right) P_l(\cos\theta)
+\end{equation}
+The coefficients may be found via Fourier's Trick.
+\end{frame}
+
+\begin{frame}{Example 3.9: Professor on Board}
+A specified charge density $\sigma_0(\theta)$ is glued over the surface of a spherical shell of radius $R$.  Find the resulting potential inside and outside the sphere. \\
+\begin{enumerate}
+\item Inside the sphere, $B = 0$ to avoid a singularity at the origin (center of sphere).
+\item Outside the sphere, $A = 0$ to ensure $V \to 0$ as $r \to \infty$.
+\item General boundary conditions at $r = R$: potential is continuous ($-\int \vec{E} \cdot d\vec{l} = 0$).
+\item Coefficients of same order $l$ have a relationship.
+\item E-field has a discontinuity at the boundary.
+\item Fourier's trick to get the coefficients, after specifying $\sigma_0(\theta)$.
+\end{enumerate}
+\end{frame}
+
+\section{Multipole Expansion}
+
+\begin{frame}{Multipole Expansion}
+Imagine a \textit{physical dipole} with $q$ at $\hat{r}' = d/2 hat{z}$ and $-q$ at $\hat{r}' = -d/2 \hat{z}$.  Show that (professor example) 
+\begin{equation}
+V(r,\theta) = \frac{kqd}{r^2} P_1(\cos\theta)
+\end{equation}
+\begin{enumerate}
+\item Far-field on script-r's
+\item Subtract
+\item Simplify
+\item Note that $P_1(x) = x$.
+\end{enumerate}
+\end{frame}
+
+\begin{frame}{Multipole Expansion}
+Can't you break \textit{any} charge distribution into a collection of monopoles, dipoles, quadrupoles, ... ? We will show next time that
+\begin{equation}
+\boxed{
+\frac{1}{\rcurs} = \frac{1}{r} \sum_{n=0}^{\infty} \left( \frac{r'}{r} \right)^n P_n(\cos\theta)
+}
+\end{equation}
 \end{frame}
 
 \section{Conclusion}
