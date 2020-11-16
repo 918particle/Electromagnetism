@@ -1,0 +1,14 @@
+Jesse Gutierrez, Homework 2.
+
+2.5: correct
+2.6: correct, although there is a tiny mistake in the second limit of z >> R, a missing z in the second denom.
+2.9: nc
+2.12: nc
+2.16: nc
+2.18: nc
+2.25: nc
+2.29: nc
+
+Final Score: 4/16
+
+So far so good, but I assume you're going to complete these exercises?  Remember we have mastery grading in this course, so you can polish this assignment and resubmit.  Just let me know when you do, thanks!

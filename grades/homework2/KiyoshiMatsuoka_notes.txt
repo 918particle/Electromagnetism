@@ -1,0 +1,18 @@
+Kiyoshi Matsuoka, Homework 2.
+
+2.5: This exercise was set up mostly correct, but the final answer doesn't appear to have the units of an E-field
+2.6: This integral may be completed with a trigonometric substitution
+2.9: correct
+2.12: correct
+2.16: correct results, though the graph shows a linear effect, followed by something that does not follow 1/s
+2.18: correct
+2.25: 
+	(a) correct, but I think you meant potential, not E.  Take the d/dz derivative to obtain E.
+	(b) The problem with integrating from 0 to 2L is that the symmetry is -L to L or -L/2 to L/2, so it would
+	cause problems in the end
+	(c) I see the potential calculation but not the E-field.  You can compare to how this field was derived earlier
+2.29: correct
+
+Final Score: 13/16
+
+Good job!

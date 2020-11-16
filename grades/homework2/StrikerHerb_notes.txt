@@ -1,0 +1,17 @@
+Striker Herb, Homework 2.
+
+2.5: correct
+2.6: correct, and if you simplify the final line you can take limits to check that it's a constant if R >> z
+2.9: correct
+2.12: correct
+2.16: correct
+2.18: correct
+2.25:
+	(a) potentials are correct, but I didn't see the derivative completed for E.
+	(b) I didn't see this part completed
+	(c) I see what appears to be the final part of this calculation but not the potential.
+2.29: correct
+
+Final Score: 15/16
+
+Well done! Maybe a page is missing?
