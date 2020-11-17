@@ -359,7 +359,7 @@ A specified charge density $\sigma_0(\theta)$ is glued over the surface of a sph
 \begin{frame}{Multipole Expansion}
 Imagine a \textit{physical dipole} with $q$ at $\hat{r}' = d/2 hat{z}$ and $-q$ at $\hat{r}' = -d/2 \hat{z}$.  Show that (professor example) 
 \begin{equation}
-V(r,\theta) = \frac{kqd}{r^2} P_1(\cos\theta)
+V(r,\theta) = \frac{kqd}{r^2} P_1(\cos\theta) \label{eq:basicDipole}
 \end{equation}
 \begin{enumerate}
 \item Far-field on script-r's
@@ -370,12 +370,66 @@ V(r,\theta) = \frac{kqd}{r^2} P_1(\cos\theta)
 \end{frame}
 
 \begin{frame}{Multipole Expansion}
-Can't you break \textit{any} charge distribution into a collection of monopoles, dipoles, quadrupoles, ... ? We will show next time that
+Can't you break \textit{any} charge distribution into a collection of monopoles, dipoles, quadrupoles, ... ? We can show in general that:
 \begin{equation}
 \boxed{
 \frac{1}{\rcurs} = \frac{1}{r} \sum_{n=0}^{\infty} \left( \frac{r'}{r} \right)^n P_n(\cos\theta)
 }
 \end{equation}
+\end{frame}
+
+\begin{frame}{Multipole Expansion}
+Can't you break \textit{any} charge distribution into a collection of monopoles, dipoles, quadrupoles, ... ?
+\begin{figure}
+\centering
+\includegraphics[width=5cm]{figures/3_28.jpg}
+\caption{\label{fig:multipole} The general scheme for the multipole expansion.}
+\end{figure}
+\end{frame}
+
+\begin{frame}{Multipole Expansion}
+Find the Law of Cosines from the definition of the separation vector: \\ \vspace{5cm}
+Then we let
+\begin{equation}
+\epsilon = \left( \frac{r'}{r} \right) \left( \frac{r'}{r} - 2\cos\alpha \right)
+\end{equation}
+\end{frame}
+
+\begin{frame}{Multipole Expansion}
+Find the Taylor series of $f(\epsilon) = (1+\epsilon)^{-1/2}$: \\ \vspace{5cm}
+Remember that 
+\begin{equation}
+\epsilon = \left( \frac{r'}{r} \right) \left( \frac{r'}{r} - 2\cos\alpha \right)
+\end{equation}
+\end{frame}
+
+\begin{frame}{Multipole Expansion}
+\begin{enumerate}
+\item After computing the Taylor series, substitute $\epsilon = \left( \frac{r'}{r} \right) \left( \frac{r'}{r} - 2\cos\alpha \right)$
+\item Collecting like powers of $\left( \frac{r'}{r} \right)$ together will lead to
+\begin{equation}
+\boxed{
+\frac{1}{\rcurs} = \frac{1}{r} \sum_{n=0}^{\infty} \left( \frac{r'}{r} \right)^n P_n(\cos\theta)
+}
+\end{equation}
+\end{enumerate}
+\end{frame}
+
+\begin{frame}{Multipole Expansion}
+Recall that the potential for \textit{any} charge distribution is
+\begin{equation}
+V(\vec{r}) = \int \frac{k \rho(\vec{r'})}{\rcurs} d\tau'
+\end{equation}
+Substitute the expansion for $1/\rcurs$, and reverse the order of summation and integration:
+\begin{equation}
+V(\vec{r}) = k \sum_{n=0}^{\infty} \frac{1}{r^{n+1}} \int (r')^n P_n(\cos\alpha)\rho(\vec{r'}) d\tau'
+\end{equation}
+\end{frame}
+
+\section{The Monopole and Dipole Terms}
+
+\begin{frame}{The Monopole and Dipole Terms}
+Using the $\rho(\vec{r'})$ of a dipole oriented along the z-axis, reproduce Eq. \ref{eq:basicDipole} using the multipole expansion. \\ \vspace{5cm} \textit{Hint: obtain the first few terms, but which ones vanish and why?}
 \end{frame}
 
 \section{Conclusion}
