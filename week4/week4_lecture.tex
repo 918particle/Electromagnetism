@@ -26,7 +26,45 @@
 \end{enumerate}
 \end{frame}
 
-\section{Atoms, polarizationsn, and dipole moments}
+\section{Dipole Moment, and The Electric Field of a Dipole}
+
+\begin{frame}{Dipole Moment, and The Electric Field of a Dipole}
+From the multipole expansion, the monopole and dipole terms are (asynchronous video content):
+\begin{align}
+V(r,\theta)_{n=0} &= \frac{1}{4\pi\epsilon_0}\frac{\int_{all} \rho(\vec{r'})d\tau'}{r} \\
+V(r,\theta)_{n=1} &= \frac{1}{4\pi\epsilon_0}\frac{\hat{r} \cdot \int_{all} \vec{r'} \rho(\vec{r'})d\tau'}{r^2} \\
+\vec{p} &= \hat{r} \cdot \int_{all} \vec{r'} \rho(\vec{r'})d\tau'
+\end{align}
+\end{frame}
+
+\begin{frame}{Dipole Moment, and The Electric Field of a Dipole}
+Valid for any charge distribution, useful for getting far-field E-fields:
+\begin{equation}
+\boxed{
+\vec{p} = \hat{r} \cdot \int_{all} \vec{r'} \rho(\vec{r'})d\tau'
+}
+\end{equation}
+\begin{enumerate}
+\item Discrete charge distribution example: asynch. video content
+\item Continuous: ``similar'' to calculating the moment of inertia of a mass distribution (only it's linear vector, not $r'^2$).
+\end{enumerate}
+\end{frame}
+
+\begin{frame}{Dipole Moment, and The Electric Field of a Dipole}
+For a dipole, with no other charges ($\vec{p} = q\vec{d}$):
+\begin{equation}
+V_{n=1}(r,\theta) = \frac{\hat{r}\cdot\vec{p}}{4\pi\epsilon_0 r^2} \label{eq:dip}
+\end{equation}
+\begin{enumerate}
+\item Using Eq. \ref{eq:dip}, calculate the electric field of a dipole in spherical coordinates.
+\item Are there any regions for which the E-field is zero?
+\item What happens when you set $\partial E/\partial \theta = 0$?
+\item Recall that the energy density of a field is $u_E = \frac{1}{2}\epsilon_0 \vec{E} \cdot \vec{E}$.  For a given radius $R$, is the energy density higher at $\theta = 0$ or $\theta = \pi/2$?
+\end{enumerate}
+\textit{Breakout rooms.}
+\end{frame}
+
+\section{Atoms, polarizations, and dipole moments}
 
 \begin{frame}{Atoms, polarizations, and dipole moments}
 Suppose an external field $\vec{E}$ induces a dipole moment $\vec{p}$ in an atomic charge distribution:
@@ -39,7 +77,7 @@ This statement is empirical, but it's true for ``ordinary'' field strengths: fie
 \end{frame}
 
 \begin{frame}{Atoms, polarizations, and dipole moments}
-\textbf{What is the electric field a distance $d$ from the center of a uniformly charged sphere?} \textit{[Hint: use Gauss' law, and assume $\rho$ is constant in spherical coordinates].} \\ \vspace{6cm}
+\textbf{What is the electric field a distance $d$ from the center of a uniformly charged sphere of radius $a$?} \textit{[Hint: use Gauss' law, and assume $\rho$ is constant in spherical coordinates].} \\ \vspace{6cm}
 \end{frame}
 
 \begin{frame}{Atoms, polarizations, and dipole moments}
