@@ -1,0 +1,45 @@
+\title{Warm-up for Electromagnetic Theory (PHYS330)}
+\author{Dr. Jordan Hanson - Whittier College Dept. of Physics and Astronomy}
+\date{\today}
+\documentclass[10pt]{article}
+\usepackage[a4paper, total={18cm, 27cm}]{geometry}
+\usepackage{hyperref}
+\usepackage{amsmath}
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Definition of the Fourier transform, and two interesting results.  These tools may be useful for final projects.
+\end{abstract}
+\noindent
+
+\section{Definition of the Fourier Transform}
+
+The \textit{Fourier transform} is a way of representing a function of time (or space) as a function of frequency (or wavevector).  Imagine a function of time: $f(t)$ having a partner function in the other space called $\widetilde{f}(\nu)$, where $\nu$ is the frequency.  The Fourier transform turns $f(t)$ into $\widetilde{f}(\nu)$, and the inverse Fourier transform turns $\widetilde{f}(\nu)$ into $f(t)$.  Let $j = \sqrt{-1}$.  Here are the definitions:
+
+\begin{align}
+\widetilde{f}(\nu) &= \int_{-\infty}^{\infty} f(t) e^{-2\pi j f t} dt \\
+f(t) &= \int_{-\infty}^{\infty} \widetilde{f}(\nu) e^{2\pi j f t} dt
+\end{align}
+
+\section{The Fourier transform of the Dirac Delta Function}
+
+Recall the main property of the Dirac delta function:
+
+\begin{equation}
+f(t_0) = \int_{-\infty}^{\infty} f(t) \delta(t - t_0) dt
+\end{equation}
+
+In this section, we aim to determine the Fourier transform of a sine wave.  First, \textbf{compute the Fourier transform of the Dirac delta function.} \textit{[Answer: $e^{-2\pi j \nu t_0}$]} \\ \vspace{1cm}
+
+Now, write down the \textit{inverse Fourier transform} of $e^{-2\pi j \nu t_0}$, and simplify the exponential under the integral sign. \\ \vspace{1cm}
+
+Finally, in a separate place, write down the \textit{Fourier transform} of $e^{2\pi j \nu_0 t}$, which is equivalent to computing the Fourier transform of a sine wave.
+
+\section{The Fourier transform of a Sine Wave}
+
+Finally, compare your expression for the Fourier transform of $e^{2\pi j \nu_0 t}$ to the inverse Fourier transform of $e^{-2\pi j \nu t_0}$, which was equal to the Dirac delta.  Make the two integrals look as alike as possible.  \textbf{To what is the Fourier transform of} $e^{2\pi j \nu_0 t}$ \textbf{equal}? \\ \vspace{1cm}
+
+Because the solutions to boundary-value problems can be expressed as sums of sines and cosines, you now have the power to express them in \textit{frequency space.}  (There is a minor detail about changing the Fourier transform to relate position and $k$-vector: $f(x)$ goes with $\widetilde{f}(k)$).
+
+\end{document}
