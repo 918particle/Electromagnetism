@@ -1,0 +1,13 @@
+David Del Carmen, Homework 3.
+
+2.43: your solution is the capacitance between two points due to a point charge, but the exercise is asking about two cylinders.
+2.50: There should be a 1/r^2 before taking the derivative.  Then, when the divergence of E is computed, we find one term with a delta-function.  Interestingly, the total charge (integral of rho) actually turns out to be zero.
+3.1: correct
+3.3: For this one, look up the form of the Laplacian in the other coordinate systems.  For example, in spherical coordinates, with dphi and dtheta = 0, the Laplacian is NOT d^2V/dr^2 = 0, but has some other form ... A quick integral gives you a familiar answer.  Similar situation for cylindrical coordinates.
+3.13: For this one, you can begin with Eq. 3.34, but it's a different condition for V_0
+3.14: NC
+3.15: NC
+
+Final Score: 8/16
+
+Keep trying, you can do it!  I know we are running low on time, but I would focus on finishing this one because boundary-value problems come up all the time.

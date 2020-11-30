@@ -1,0 +1,13 @@
+Striker Herb, Homework 3.
+
+2.43: Correct
+2.50: correct, well done.  You've broken the problem into manageable pieces
+3.1: correct, and I see you used the far-field approx. there
+3.3: correct, but to finish it off you have to integrate const./s, which is const * ln(s) + const.
+3.13: almost.  when n is a multiple of 4, c_n is also zero, so we need only evens that are not a multiple of 4
+3.14: correct
+3.15: correct, but I don't quite follow the last step regarding the coefficients.
+
+Final Score: 15/16
+
+Excellent work!
