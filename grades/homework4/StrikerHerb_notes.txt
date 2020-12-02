@@ -1,0 +1,14 @@
+Striker Herb, Homework 4.
+
+4.1, 4.7, Example 4.2, 4.10, 4.15, 4.18
+
+4.1: correct
+4.7: correct
+Ex. 4.2: this is on the right track, but how does this relate to the polarization density P?
+4.10: correct
+4.15: Part a) since there is no free charge, it's ok to say D = 0.  There is bound surface charge, sure, but D doesn't need to know that.  I think actually parts a and b are switched around here.
+4.18: correct
+
+Final Score: 15/16
+
+Well done, thanks for your hard work!

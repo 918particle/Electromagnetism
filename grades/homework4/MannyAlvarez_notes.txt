@@ -1,0 +1,14 @@
+Manny Alvarez, Homework 4.
+
+4.1, 4.7, Example 4.2, 4.10, 4.15, 4.18
+
+4.1: correct
+4.7: correct
+Ex. 4.2: I see the determination of the bound surface charge but I don't think the integral that follows is right ... Where is the theta-dependence?
+4.10: For the bound volume charge in part (a), I think the k is missing in place of r, but you would have gotten it right.  For part b), yes, the field is zero outside but not because there is no charge there.  Gauss' law suggests the field is the same as if all the charge is at the center.  But the *total* charge in this problem is actually zero.
+4.15: correct
+4.18: correct
+
+Final Score: 15/16
+
+This was a great piece of physics work, well done.

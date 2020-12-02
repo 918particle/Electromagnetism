@@ -1,0 +1,16 @@
+Eliott Bergerson, Homework 4.
+
+4.1, 4.7, Example 4.2, 4.10, 4.15, 4.18
+
+4.1: correct
+4.7: correct
+Ex. 4.2: 
+4.10: correct
+4.15: For the field a < r < b, I think you mean it's in the r-hat direction, proportional to 1/r.  Correct, though.
+4.18: For part (a), yes there is no free charge in the middle, but you can draw a box enclosing the free charge at either plate, so D = +/- sigma.  correct, though.
+
+4.6: Bonus! You got this problem right all the way through ... I didn't cover the method of images.
+
+Final Score: 18/16
+
+Excellent work!

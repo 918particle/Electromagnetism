@@ -1,0 +1,14 @@
+Kiyoshi Matsuoka, Homework 4.
+
+4.1, 4.7, Example 4.2, 4.10, 4.15, 4.18
+
+4.1: For part b) to ionize, we model this by saying d = R, so moving the electron "cloud" all the way off the atom.  I think you are saying the electron shift is a factor of 125 of the radius?  I think it's more like 10^(-6)
+4.7: correct
+Ex. 4.2: correct, well done.  You can actually express your answers with P in them, the polarization density.  We can show that p = 4/3 pi r^3 P (dipole is volume times pol. dens.)
+4.10: correct
+4.15: If I understand correctly, you're saying E ~ 1/r, which is correct.
+4.18: Half points - the problem is right so far
+
+Final Score: 14/16
+
+Great effort, thanks for your hard work!
