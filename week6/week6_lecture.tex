@@ -1,0 +1,139 @@
+\documentclass{beamer}
+\usetheme{metropolis}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{url}
+
+\def\rcurs{{\mbox{$\resizebox{.16in}{.08in}{\includegraphics{ScriptR}}$}}}
+\def\brcurs{{\mbox{$\resizebox{.16in}{.08in}{\includegraphics{BoldR}}$}}}
+\def\hrcurs{{\mbox{$\hat \brcurs$}}}
+
+\title{Electromagnetc Theory: PHYS330}
+\author{Jordan Hanson}
+\institute{Whittier College Department of Physics and Astronomy}
+
+\begin{document}
+\maketitle
+
+\section{Summary}
+
+\begin{frame}{Week 6 Summary}
+\begin{enumerate}
+\item Current and Newton's Law
+\item Flux rule from Lorentz force
+\item Faraday's Law: Inspired by Symmetry
+\begin{itemize}
+\item Induced E-fields
+\item Quasi-static behavior
+\end{itemize}
+\item Inductors and analog filtering (special topic)
+\end{enumerate}
+\end{frame}
+
+\section{Current and Newton's Law}
+
+\begin{frame}{Current and Newton's Law}
+Why does current move at a constant velocity, if it is driven by an electric field?
+\begin{equation}
+\vec{J} = \sigma (\vec{E} + \vec{v} \times \vec{B} ) = \sigma \vec{E}
+\end{equation}
+This formula governs the current density as a function of force per unit charge, and it assumes small drift velocities so that the magnetic contributions are zero. \\ \vspace{0.5cm}
+\textit{What is the acceleration of an electron in the middle of a parallel plate capacitor with empty space in the middle? } Let the charge density be 1 $\mu$ C per cm$^2$.  The mass of an electron is $9.1\times 10^{-31}$ kg, and $\epsilon_0 = 8.85 \times 10^{-12}$ F/m.
+\end{frame}
+
+\begin{frame}{Current and Newton's Law}
+Why does current move at a constant velocity, if it is driven by an electric field?
+\begin{equation}
+\vec{J} = \sigma (\vec{E} + \vec{v} \times \vec{B} ) = \sigma \vec{E}
+\end{equation}
+This formula governs the current density as a function of force per unit charge, and it assumes small drift velocities so that the magnetic contributions are zero. \\ \vspace{0.5cm}
+\textit{What is the acceleration of a charge flowing in a conductor that connects the parallel plates of the capacitor?} Let the charge density be 1 $\mu$ C per cm$^2$.  The mass of an electron is $9.1\times 10^{-31}$ kg, and $\epsilon_0 = 8.85 \times 10^{-12}$ F/m.  Let the total effective resitance be 1 $\Omega$.
+\end{frame}
+
+\begin{frame}{Current and Newton's Law}
+\begin{figure}
+\centering
+\includegraphics[width=5cm]{figures/7_1.jpg}
+\includegraphics[width=5cm]{figures/7_3.jpg}
+\caption{\label{fig:cond1} (Left) A conductor. (Right) A capacitor with the same geometry.}
+\end{figure}
+\begin{itemize}
+\item Convince yourself that if the potential difference between the left and right sides of the conductor (left) is $V_0 - 0 = V_0$, that $V(z) = (V_0/L) z$.
+\item The E-field is therefore $\vec{E} = - V_0/L \hat{z}$, but the current does not accelerate.
+\end{itemize}
+\end{frame}
+
+\section{Motional EMF Problems: Flux Rule from the Lorentz Force}
+
+\begin{frame}{Flux Rule from Lorentz Force}
+\begin{figure}
+\centering
+\includegraphics[width=7cm]{figures/7_17.jpg} \\
+\includegraphics[width=3.0cm]{figures/7_19.jpg}
+\caption{\label{fig:gen} Motional emf problems resulting from the Lorentz force, solvable by the flux rule. (Top) Frictionless rails problem ... rail guns.  (Bottom): the AC generator.}
+\end{figure}
+\end{frame}
+
+\section{Faraday's Law: Inspired by Symmetry}
+
+\begin{frame}{Faraday's Law}
+\alert{\textbf{In words:}} E-fields (via currents) generate B-fields.  Changing B-fields induce E-fields (in loops). 
+In differential form:
+\begin{equation}
+\boxed{
+\nabla \times \vec{E} = -\frac{\partial \vec{B}}{\partial t}
+}
+\end{equation}
+In integral form (via Stoke's Theorem):
+\begin{equation}
+\boxed{
+\oint \vec{E} \cdot d\vec{l} = - \frac{\partial}{\partial t} \int \vec{B} \cdot d\vec{a}
+}
+\end{equation}
+\end{frame}
+
+\begin{frame}{Faraday's Law}
+\begin{figure}
+\centering
+\includegraphics[width=4cm]{figures/7_25.jpg} \\
+\caption{\label{fig:far1} Cylindrical symmetry and the use of Faraday's Law to obtain emf.}
+\end{figure}
+\begin{itemize}
+\item What is the magnitude and shape of the $\vec{E}$-field a distance $s$ from the origin?
+\item What is the current $I$ in a loop of wire at the same radius?
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Faraday's Law}
+\begin{figure}
+\centering
+\includegraphics[width=4cm]{figures/7_25.jpg} \\
+\caption{\label{fig:far1} Cylindrical symmetry and the use of Faraday's Law to obtain emf.}
+\end{figure}
+\begin{itemize}
+\item What is the acceleration of a point charge located a distance $s$ from the origin?
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Faraday's Law}
+\textbf{Exercise 7.13:} A square loop of wire, with sides of length a, lies in the first quadrant of the xy-plane, with one corner at the origin.  In this region, there is a nonuniform time-dependent magnetic field $\vec{B}(y,t) = k y^3 t^2 \hat{z}$ (where $k$ is constant).  Find the emf induced in the loop. \\ \vspace{6cm}
+\end{frame}
+
+\section{Special Topic: Inductors and Analog Filtering of Voltage Signals}
+
+\section{Conclusion}
+
+\begin{frame}{Week 6 Summary}
+\begin{enumerate}
+\item Current and Newton's Law
+\item Flux rule from Lorentz force
+\item Faraday's Law: Inspired by Symmetry
+\begin{itemize}
+\item Induced E-fields
+\item Quasi-static behavior
+\end{itemize}
+\item Inductors and analog filtering (special topic)
+\end{enumerate}
+\end{frame}
+
+\end{document}
