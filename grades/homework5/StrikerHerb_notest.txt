@@ -1,0 +1,15 @@
+Striker Herb, Homework 5.
+
+5.14, 5.16, 5.17, 5.19, 5.20, 5.23, 5.26
+
+5.14: correct
+5.16: correct
+5.17: correct
+5.19: correct
+5.20: correct, but some of the answers are missing units.  Make sure to keep these along for the ride throughtout the problem.
+5.23: you've gotten this one right, actually.  It turns out sin(theta1) and sin(theta2) can be written as ratios of z1, z2, and s (which appear in your answer).
+5.26: correct
+
+Final Score: 16/16
+
+Well done!  Nice work

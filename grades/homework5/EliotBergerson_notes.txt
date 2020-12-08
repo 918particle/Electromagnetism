@@ -1,0 +1,15 @@
+Eliot Bergerson, Homework 5.
+
+5.14, 5.16, 5.17, 5.19, 5.20, 5.23, 5.26
+
+5.14: correct
+5.16: correct
+5.17: correct, got the speed of light there
+5.19: correct
+5.20: correct
+5.23: correct
+5.26: For this one, you have some good stuff, but the key is to use A = A(s), and that curl of B is A
+
+Final Score: 15/16
+
+Thanks for your hard work, well done.

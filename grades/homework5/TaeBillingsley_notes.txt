@@ -1,0 +1,13 @@
+Tae Billingsley, Homework 5.
+
+5.14, 5.16, 5.17, 5.19, 5.20, 5.23, 5.26
+
+5.14: correct
+5.16: correct
+5.17: correct, got the speed of light there
+5.19: correct
+5.20: correct
+5.23: correct
+5.26: correct, but I don't see the step where you explain why a = b = R.
+
+Final Score: 15/16
