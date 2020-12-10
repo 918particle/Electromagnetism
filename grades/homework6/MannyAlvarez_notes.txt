@@ -1,0 +1,11 @@
+Manny Alvarez, Homework 6.
+
+7.12, 7.15, 7.34
+
+7.12: correct
+7.15: correct - it's hard to read the field inside but it should be linear in s
+7.34: correct
+
+Final Score: 16/16
+
+Great work, thanks for a great semester

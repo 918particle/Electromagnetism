@@ -1,0 +1,11 @@
+Danny Diaz, Homework 6.
+
+7.12, 7.15, 7.34
+
+7.12: correct
+7.15: correct
+7.34: there's a slight goof-up with the value of I_d,enc important for loop at s.  I_d,enc = I s^2/a^2.  So the field is linear in s.
+
+Final Score: 15/16
+
+Great work, as always
