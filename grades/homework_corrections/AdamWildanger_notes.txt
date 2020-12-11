@@ -1,0 +1,28 @@
+Adam Wildanger, Homework re-submission
+
+1.59: correct
+1.62: Part (a): It turns out that there is a factor of two: da is proportional to r-hat, which is not constant (but x-hat, y-hat, and z-hat are).  The x and y components of da integrate to zero while the z-component picks up a cosine but integrates to pi R^2 z-hat.  Part (d) I didn't find, but the other parts look good.
+1.63: correct
+1.64: correct
+
+2.12: correct, if it were a solid ball of charge.  But it looks like a shell of charge, right?  Anyways, the r-dependence is still right.
+2.16: correct
+2.18: it's kind of hard to read, but it looks like you have the right diagram and the formula is proportional to rho, so it's correct
+2.25: correct
+2.29: correct
+
+2.50: correct
+3.3: The goal here was to actually solve the differential equations for the two cases: r-dep only in spherical: a/r + C, and s-dep only in cylindrical is logarithmic
+3.13: It looks hard to read again, but I give it to you because I can see the correct form for the coefficients C_n
+3.14: this one is wrong, because it should be a Fourier series for the C_n coefficient (each odd-integer sin(n pi y/a) )
+3.15: correct
+
+3.29: Bonus! The book says it should be 2q not sqrt(2)q, so I give you partial credit.
+
+4.7: I don't know why d = r theta but the point is work is equal to the integral of torque over angle.
+4.6: The method of images here says that there is essentially another opposite dipole on the "other side" of the grounded plate.  This is because the E-field must follow the boundary conditions we derived from Gauss' law.
+
+5.17: Part (b): correct Part (c): correct, speed of light! 
+5.19: correct, but why is it surface independent?  Because div J = 0 (steady currents)
+5.20: correct, but I didn't find parts c and d?
+5.23: correct for the vector potential, but then we're supposed to find the B-field
