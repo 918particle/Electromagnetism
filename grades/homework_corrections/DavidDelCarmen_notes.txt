@@ -1,0 +1,39 @@
+David Del Carmen, Homework re-submission
+
+Hey there!  I just wanted to say first before you read these comments that I don't want you to get discouraged.  I can tell that you worked hard on these, and that you deserve every point earned.  Sometimes people are tempted to look up the answers in a solution manual but this work is original and I appreciated that.
+
+Most of these exercises have some issue that indicate that you went in the wrong direction.  I recommend hanging on to the textbook and going through it more in the coming summer.  Good luck with everything and Merry Christmas!
+
+5.14: part (a) incorrect, the integral on the left side is 2 pi l B, part (b) incorrect J isn't a constant
+5.16: two out of three answers right, but remember that inside both solenoids the fields subtract
+5.17: The point of this problem is that you use Ampere's law to find the B-field of a sheet of current and then notice that the fields cancel outside the space between the plates.
+5.19: remember that fields with no divergence still follow Stoke's theorem and can be written as the curl of some other field
+5.20: for part a we were looking for the charge density not the mass density.  your estimate in part b is not far off though.  for parts c and d you can't simply estimate the force with k q^2/d^2.
+5.23: This one is all wrong because 1/r is not constant across the integral
+5.26: The second part should have the vector potential increasing as s^2 then as ln(s), but you have the B-field going as s^2
+
+2.5: the x-component should cancel.  this can be seen by symmetry.  The x and y components are proportional to cosine and sine of phi', which integrates to zero from 0 to 2 pi.
+2.6: The integral should have been over dr, not phi.  You write that the s-hat part cancels, but that means you've integrated over phi already...
+2.9: part (a), it should be a 5 instead of a 3 as the coefficient.  the integral in part (b) does not have the correct volume element for spherical coordinates, and the final units are off.  parts c and b should agree in terms of the enclosed charge.
+2.12: the answer has the wrong units because it is missing a factor of R.
+2.16: This is a Gauss' law style problem, and the surface area of a cylinder.  There should be no E-field outside of the system, because the problem says that the coaxial cable is electrically neutral.
+2.18: charge and charge density are not the same quantity.  so q doesn't equal rho and you can't just insert rho where q normally goes in the coulomb effect
+2.25: i didn't see a lot going on in this one...even the two single charges was not set up correctly
+2.29: there should have been some mention of a delta function in this problem.
+
+2.43: the E-field here is not k q/r^2.  The capacitance is logarithmic.
+2.50: OK, so, in general, you can't just say E = k Q/r^2.  It turns out that Q is zero in this case, and there should be some mention of delta functions, because we're taking the gradient and then the divergence of (1/r).
+3.1: correct
+3.3: not quite, because the laplacian itself changes form in spherical coordinates.
+3.13: this problem was started correctly, but we need to follow the example 3.3 in the book and apply more boundary conditions, and then use Fourier's trick.
+
+4.1: I don't understand why the factor of 1 mm gets introduced when we are trying to find the distance of separation between positive nucleus and negative electron field.
+4.7: Almost right, but I think you need to explain what is phi-hat cross p here (p sin(theta) times some hat-vector) and then integrate sine to get negative cosine (like a dot-product has cosine).
+Ex. 4.2: An E-field can't go as kq/r and kq/r^2, right?
+4.10: The surface and bound charge are not computed correctly - r dot r would be r^2 but remember the surface charge is P dot r-hat, evaluated at r = R, so kR.  The bound volume charge is proportional to r.  For part b I'm sorry you had to do all that algebra, but the total charge enclosed is zero.  So by Gauss' law, the field is zero.  Maybe this makes sense if you think about what polarized material is: it's got no free charge so all the little dipoles are going to (usually) cancel each other, unless there's leftover surface charge.
+4.15: for surface bound charge you have to evaluate the variables at the surface, so r = R (which is a or b).  The contained charge for r<a and r>b is zero.  In between the field is proportional to r.  I recommend part (b) first because then you find that D = 0 the whole way through.  That means that E is proportional to P.
+4.18: You start out correctly, assuming a is some length scale (sigma = q / Area).  But you proceed as if the two epsilons are the same number and they are different numbers.
+
+7.12: There is no mention of current I(t) in this problem?  Just take B(t) times A as the flux then take the derivative to find emf as a function of time
+7.15: For inside the solenoid it should be prortional to loop radius and dI/dt.  For outside, 1/s and dI/dt.  Why?  Because (outside) it still contains the solenoid flux.
+7.34: This is almost right, but it is missing a factor of (s/a).  The field is larger as the radius grows because the loop gathers more E-field and therefore more B dot dl.

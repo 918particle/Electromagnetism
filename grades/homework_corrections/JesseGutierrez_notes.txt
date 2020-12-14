@@ -1,0 +1,51 @@
+Jesse Gutierrez, Homework re-submission
+
+1.54: correct
+1.55: correct
+1.56: correct
+1.57: correct, but I don't see the check of Stoke's theorem by doing the surface integral
+1.59: correct
+1.62: for part (c), i don't know what you mean by the gradient of a vector.  otherwise, correct in all other parts
+1.63: correct
+1.64: correct
+
+2.5: correct
+2.6: correct
+2.9: in part (a) I don't understand what you mean by S ... you formed the divergence correctly but didn't evaluate it.  part (b) is correct, so you must have had rho(r')...
+2.12: correct
+2.16: correct
+2.18: correct
+2.25: correct
+2.29: correct
+
+2.43: correct
+2.50: correct
+
+for the potential problem involving switching q to -q, your explanation sounds like the solution manual, but you don't do any mathematics to show it.  Have you seen the solution manual?
+
+3.1: correct
+3.3: correct
+3.13: correct
+3.14: correct
+3.15: correct
+
+4.1: correct
+4.7: this is almost correct, remember we have to bring both charges in from infinity, not just integrate from r to r+d: so it's infinity to r and infinity to r+d
+4.10: correct
+4.15: correct
+4.18: correct
+Ex. 4.2: correct
+
+5.14: correct
+5.16: correct
+5.17: correct
+5.19: correct
+5.20: I don't see part (d)
+5.23: correct
+5.26: I think I ended up covering this one in class, where the hint was that you draw the Amperian loop parallel to A (the current) and then go along s, then antiparallel, then -s, then close the loop.  Argue that since A(s) is only a function of s, that the +/-s sides cancel, and you get the ln(s/s_0) part.  Its derivative goes as 1/s, like the wire from Ampere's law.
+
+7.12: correct
+7.15: not quite.  The E-field should fall as 1/s for outside, and grow as s for inside
+7.34: correct
+
+C'est finit!  Well done, and thank you for getting this in on time.  I appreciate how you showed your work.
