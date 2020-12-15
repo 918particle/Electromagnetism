@@ -1,0 +1,7 @@
+Tae Billingsley, Homework re-submission
+
+7.12: correct
+7.15: your answer for inside the solenoid is correct, but the outside answer is a special case.  the distance from s = 0 can be anything, and the E-field has to fall as 1/s
+7.34: would have been right but I think there is one too many factors of s^2 ...
+
+Great work, and congratulations once again!  Merry Christmas
