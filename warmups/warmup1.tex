@@ -15,24 +15,24 @@ Definition of the Fourier transform, and two interesting results.  These tools m
 
 \section{Definition of the Fourier Transform}
 
-The \textit{Fourier transform} is a way of representing a function of time (or space) as a function of frequency (or wavevector).  Imagine a function of time: $f(t)$ having a partner function in the other space called $\widetilde{f}(\nu)$, where $\nu$ is the frequency.  The Fourier transform turns $f(t)$ into $\widetilde{f}(\nu)$, and the inverse Fourier transform turns $\widetilde{f}(\nu)$ into $f(t)$.  Let $j = \sqrt{-1}$.  Here are the definitions:
+The \textit{Fourier transform} is a way of representing a function of time (or space) as a function of frequency (or wavevector).  Imagine a function of time: $E(t)$ having a partner function in the other space called $\widetilde{E}(\nu)$, where $\nu$ is the frequency.  The Fourier transform turns $E(t)$ into $\widetilde{E}(\nu)$, and the inverse Fourier transform turns $\widetilde{E}(\nu)$ into $E(t)$.  Let $j = \sqrt{-1}$.  Here are the definitions:
 
 \begin{align}
-\widetilde{f}(\nu) &= \int_{-\infty}^{\infty} f(t) e^{-2\pi j f t} dt \\
-f(t) &= \int_{-\infty}^{\infty} \widetilde{f}(\nu) e^{2\pi j f t} dt
+\widetilde{E}(\nu) &= \int_{-\infty}^{\infty} E(t) e^{-2\pi j \nu t} dt \\
+E(t) &= \int_{-\infty}^{\infty} \widetilde{E}(\nu) e^{2\pi j \nu t} d\nu
 \end{align}
 
 \section{The Fourier transform of the Dirac Delta Function}
 
-Recall the main property of the Dirac delta function:
+Recall the main property of the Dirac delta function, $\delta(t-t_0)$:
 
 \begin{equation}
 f(t_0) = \int_{-\infty}^{\infty} f(t) \delta(t - t_0) dt
 \end{equation}
 
-In this section, we aim to determine the Fourier transform of a sine wave.  First, \textbf{compute the Fourier transform of the Dirac delta function.} \textit{[Answer: $e^{-2\pi j \nu t_0}$]} \\ \vspace{1cm}
+In this section, we aim to determine the Fourier transform of a sine wave.  First, \textbf{compute the Fourier transform of the Dirac delta function} by inserting $\delta(t-t_0)$ for $E(t)$ in the definition of the Fourier transform. \\ \\ \textit{[Answer: $e^{-2\pi j \nu t_0}$]} \\ \vspace{1.5cm}
 
-Now, write down the \textit{inverse Fourier transform} of $e^{-2\pi j \nu t_0}$, and simplify the exponential under the integral sign. \\ \vspace{1cm}
+Now, write down the \textit{inverse Fourier transform} of $e^{-2\pi j \nu t_0}$, and simplify the exponential under the integral sign. \\ \vspace{1.5cm}
 
 Finally, in a separate place, write down the \textit{Fourier transform} of $e^{2\pi j \nu_0 t}$, which is equivalent to computing the Fourier transform of a sine wave.
 
