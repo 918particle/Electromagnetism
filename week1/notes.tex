@@ -1,0 +1,68 @@
+\documentclass{beamer}
+\usetheme{metropolis}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\title{Electromagnetc Theory: PHYS330}
+\author{Jordan Hanson}
+\institute{Whittier College Department of Physics and Astronomy}
+
+\begin{document}
+\maketitle
+
+\section{Class Notes}
+
+\begin{frame}{Warm-Up 1}
+Suppose we have an electron traveling at 1 percent of the speed of light, with a velocity vector
+\begin{equation}
+\vec{v} = \frac{|\vec{v}|}{\sqrt{2}} \hat{i} + \frac{|\vec{v}|}{\sqrt{2}} \hat{j}
+\end{equation}
+The electron is traveling in a $\vec{B}$-field of 0.5 Gauss ($0.5 \times 10^{-4}$ Tesla) that is pointed in the z-direction.  What is the force on the electron?  \textit{[Hint: $\vec{F} = q\vec{v} \times \vec{B}$]}
+\end{frame}
+
+\begin{frame}{Answer}
+Answers (build up the answer from smaller pieces):
+\begin{align}
+\vec{v} &= a(\hat{i} + \hat{j}) \\
+\vec{B} &= B \hat{k} \\
+\vec{v} \times \vec{B} &= a B (\hat{i} \times \hat{k} + \hat{j} \times \hat{k}) \\
+\vec{v} \times \vec{B} &= a B (\hat{i} - \hat{j}) \\
+\vec{v} \times \vec{B} &= \frac{|\vec{v}|B}{\sqrt{2}} (\hat{i} - \hat{j})
+\end{align}
+Now, we want to add $q$, and the values of $B$ and $v$ ...
+\end{frame}
+
+\begin{frame}{Warm-Up 2}
+Suppose we have a function that describes the \textit{potential energy} of a system:
+\begin{equation}
+U(x,y,z) = m g z
+\end{equation}
+Take the gradient and multiply by minus one.  What do you get? \textit{[Hint: $\vec{F} = - \nabla U(x,y,z)$.]}
+\end{frame}
+
+\begin{frame}{Warm-Up 2}
+Answer:
+\begin{equation}
+-\nabla U(x,y,z) = -\left(\hat{i}\frac{\partial}{\partial x} + \hat{j}\frac{\partial}{\partial y} + \hat{k}\frac{\partial}{\partial z}\right) m g z
+\end{equation}
+Take the gradient and multiply by minus one.  What do you get? \textit{[Hint: $\vec{F} = - \nabla U(x,y,z)$.]}
+\end{frame}
+
+\section{More Class Notes}
+
+\begin{frame}{Gradient of $r = \sqrt{x^2 + y^2  + z^2}$}
+\begin{equation}
+\nabla r = \left(\hat{i}\frac{\partial r}{\partial x} + \hat{j}\frac{\partial r}{\partial y} + \hat{k}\frac{\partial r}{\partial z}\right)
+\end{equation}
+(Break the problem into pieces ... )
+\begin{align}
+\frac{\partial r}{\partial x} &= \frac{\partial }{\partial x} (x^2 + ... )^{1/2} = \frac{1}{2}(x^2 + ... )^{-1/2}(2x) \\
+\frac{\partial r}{\partial y} &= \frac{\partial }{\partial y} (y^2 + ... )^{1/2} = \frac{1}{2}(y^2 + ... )^{-1/2}(2y) \\
+\frac{\partial r}{\partial z} &= \frac{\partial }{\partial z} (z^2 + ... )^{1/2} = \frac{1}{2}(z^2 + ... )^{-1/2}(2z)
+\end{align}
+The result is:
+\begin{equation}
+\nabla r = \hat{r}
+\end{equation}
+\end{frame}
+
+\end{document}
