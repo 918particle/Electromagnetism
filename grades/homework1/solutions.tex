@@ -48,4 +48,216 @@ Here are some useful conversions:
 \end{itemize}
 Substituting all of that into Eq. \ref{eq:line1} gives $(b-a) \pi R^2$.
 
+\clearpage
+
+\section{Problem 1.56}
+
+Break the problem into pieces.  First, address the closed-path line integral.  For the first path,
+
+\begin{align}
+d\vec{l} &= dy \hat{y} \\
+\vec{v} \cdot d\vec{l} &= y z^2 dy \\
+z &= 0 \\
+\int \vec{v} \cdot d\vec{l} &= 0
+\end{align}
+
+For the other straight piece,
+
+\begin{align}
+d\vec{l} &= dz \hat{z} \\
+\vec{v} \cdot d\vec{l} &= (3y + z) dz \\
+x = y &= 0 \\
+\int \vec{v} \cdot d\vec{l} &= -\int_0^{2} (3y+z) dz = -2
+\end{align}
+
+For the diagonal piece, the path has $x = 0$, and $z = 2 - 2y$, with $dz = - 2 dy$.  We have
+
+\begin{align}
+d\vec{l} &= dy \hat{y} + dz \hat{z} \\
+\int \vec{v} \cdot d\vec{l} &= \int_{1}^{0} dy \left( 4 y^3 - 8y^2 +2 y - 4\right) = \frac{14}{3} \\
+\end{align}
+
+In total, the close-path line integral is $\boxed{-2 + 14/3 = 8/3}$.  The curl of the field is
+
+\begin{equation}
+\nabla \times \vec{v} = (3 - 2 y z)\hat{x} + ...
+\end{equation}
+
+\textit{We don't need the other components of the curl because the area vector will just cancel them:} $d\vec{a} = dy dz \hat{x}$.
+
+\begin{align}
+\int (\nabla \times \vec{v}) \cdot d\vec{a} &= \int_{0}^{1} \int_{0}^{2 - 2y} dz dy (3 - 2 y z) \label{eq:limit} \\
+\int_{0}^{1} dy \left( 4y^3 - 8y^2 + 10y -6 \right) &= \frac{8}{3}
+\end{align}
+
+Notice in Eq. \ref{eq:limit} that we integrate $z$ from $0$ to $z_{max}$, where $z_{max}$ is determined by the relationship between $z$ and $y$.  Thus, Stoke's theorem checks out.
+
+\section{Problem 1.57}
+
+This exercise helps us practice with coordinate systems besides Cartesian.  The line integral involves four pieces.  The first is in the $x$-direction.  In spherical coordinates:
+
+\begin{align}
+d\vec{l} &= dr \hat{r} \\
+\phi &= 0, ~ \theta = \pi/2 \\
+\vec{v} \cdot d\vec{l} &= r \cos^2\theta ~ dr = 0
+\end{align}
+
+The second piece is in the $xy$-plane, with $\theta = \pi/2$ anmd $r = 1$.  In spherical coordinates:
+
+\begin{align}
+d\vec{l} &= d\phi \hat{\phi} \\
+\phi &= 0, ~ \theta = \pi/2 \\
+\vec{v} \cdot d\vec{l} &= r \cos^2\theta ~ dr = 0
+\end{align}
+
+The result is
+
+\begin{equation}
+\int \vec{v} \cdot d\vec{l} = \int_{0}^{3\pi/2} 3 r d\phi = \frac{3\pi}{2}
+\end{equation}
+
+The third piece is in the $z$-direction, with $y = 1$ and $x = 0$.  We have
+
+\begin{align}
+d\vec{l} &= dr \hat{r} + r d\theta \hat{\theta} \\
+\vec{v} \cdot d\vec{l} &= r \cos^2\theta dr - r^2 \cos\theta\sin\theta d\theta \\
+y &= r\sin\theta = 1 ~~ (r = 1/\sin\theta) \\
+dr &= -\frac{\cos\theta}{\sin^2\theta} d\theta \\
+\vec{v} \cdot d\vec{l} &= (-\cot^3\theta - \cot\theta) d\theta
+\end{align}
+
+The line integral can therefore be cast in terms of $\theta$ only, and integrated from $\theta = \pi/2$ to $\tan^{-1}(1/2)$.  The result is 
+
+\begin{equation}
+\int \vec{v} \cdot d\vec{l} = -\frac{1}{2} \left. \frac{1}{\sin^2\theta} \right|_{\pi/2}^{\tan^{-1}(1/2)} = 2
+\end{equation}
+
+For the last piece, the path is along $r$, while $\phi = \pi/2$ \textit{and} $\theta = \theta_0 = \tan^{-1}(1/2)$ remain fixed.  We find
+
+\begin{align}
+d\vec{l} &= dr \hat{r} \\
+\vec{v} \cdot d\vec{l} &= \cos^2\theta_0 r dr \\
+\int \vec{v} \cdot d\vec{l} &= \cos^2\theta_0 \int_{\sqrt{5}}^{0} r dr = -2
+\end{align}
+
+Totaling the four contributions to the line integral: $\boxed{3\pi/2 + 2 - 2 = 3\pi/2}$.  Checking Stoke's theorem requires the curl in spherical coordinates:
+
+\begin{equation}
+\nabla \times \vec{v} = 3 \cot\theta ~ \hat{r} - 6 \hat{\theta}
+\end{equation}
+
+The surface integral of the bottom face is ($d\vec{a} = -r dr d\phi \hat{\theta}$):
+
+\begin{equation}
+\int \nabla \times \vec{v} \cdot d\vec{a} = \int_0^{\pi/2} \int_0^{1} 6 r dr d\phi = \frac{3\pi}{2}
+\end{equation}
+
+For the back face, $d\vec{a} = da \hat{\phi}$.  But the curl does not have a $\hat{\phi}$-component, so that surface integral is zero. Thus, Stoke's Theorem checks out.
+
+\section{Problem 1.59}
+
+First, find the divergence using spherical coordinates:
+
+\begin{equation}
+\nabla \cdot \vec{v} = 4 r \cot\theta\cos\theta
+\end{equation}
+
+Integrate over the slice of the sphere with radius $R$ and opening angle $\theta = \pi/6$.
+
+\begin{equation}
+\int_0^{R} \int_0^{2\pi} \int_0^{\pi/6} 4 r \cot\theta\cos\theta ~ r^2 \sin\theta dr d\theta d\phi = 2\pi R^4 \int_0^{\pi/6} \cos^2\theta d\theta = \boxed{\frac{\pi R^4}{12}(2\pi + 3\sqrt{3})}
+\end{equation}
+
+The closed surface integral must be broken into the ``cone'' portion, and the ``top'' portion.  For the top, we have
+
+\begin{align}
+d\vec{a} &= R^2 \sin\theta d\theta d\phi \hat{r} \\
+\vec{v} \cdot d\vec{a} &= R^4 \sin^2\theta d\theta d\phi \\
+\int \vec{v} \cdot d\vec{a} &= 2\pi R^4 \int_{0}^{\pi/6} \sin^2\theta d\theta \\
+\int \vec{v} \cdot d\vec{a} &= \frac{\pi R^4}{12}(2\pi - 3\sqrt{3})
+\end{align}
+
+For the cone portion:
+
+\begin{align}
+d\vec{a} &= \frac{1}{2} r dr d\theta d\phi \hat{\theta} \\
+\int \vec{v} \cdot d\vec{a} &= \int_0^{1} \int_{0}^{2\pi} \sqrt{3} r^3 dr d\phi = \frac{\pi \sqrt{3} R^4}{2} 
+\end{align}
+
+Summing the top and the cone, we find the surface integral total is $\boxed{\frac{\pi R^4}{12}(2\pi + 3\sqrt{3})}$.
+
+\section{Problem 1.62}
+
+\begin{itemize}
+
+\item (a) First, note that $d\vec{a} = R^2 \sin\theta d\theta d\phi \hat{r}$.  Integrating just $d\vec{a}$ should yield a vector, which can be broken into x, y, and z-components.  By symmetry, there should be no x or y-components.  Just the z-component of $\hat{r}$ is $\cos\theta \hat{z}$ (back cover of the textbook). Integrating:
+
+\begin{equation}
+\vec{a} = 2 \pi R^2 \hat{z} \int_{0}^{\pi/2} \sin\theta\cos\theta ~ d\theta = \pi R^2 \hat{z}
+\end{equation}
+
+In other words, we find the projected cross-sectional area, that of a circle and not of a hemisphere.
+
+\item (b) Note that Problem 1.61 (a) says that
+
+\begin{equation}
+\int_{\mathcal{V}} (\nabla T) d\tau = \oint_{\mathcal{S}} T d\vec{a}
+\end{equation}
+
+This is the type of formula that follows from the other fundamental theorems of calculus.  It says that the volume integral over a vector field that is the gradient of a scalar is equal to the closed surface integral of the scalar.  However, we can let $T(x,y,z) = 1$ so that the right hand side is 
+
+\begin{equation}
+\oint_{\mathcal{S}} d\vec{a} = \int_{\mathcal{V}} (\nabla ~ 1) d\tau = 0
+\end{equation}
+
+Thus, all closed surface integrals of constants are zero.
+
+\item (c)  Suppose there are two surfaces $\mathcal{S}_1$ and $\mathcal{S}_2$ that share the same boundary line.  Adding the surface integrals:
+
+\begin{equation}
+\oint_{\mathcal{S}_1} d\vec{a} + \oint_{\mathcal{S}_2} d\vec{a} = \vec{a}_{\rm total}
+\end{equation}
+
+But the two surfaces now form a closed surface, so $\vec{a}_{\rm total} = \vec{0}$ (part b).  Further, the normal directions of $\mathcal{S}_1$ and $\mathcal{S}_2$ differ by a minus sign, so we find
+
+\begin{align}
+\oint_{\mathcal{S}_1} d\vec{a} - \oint_{\mathcal{S}_2} d\vec{a} &= 0 \\
+\oint_{\mathcal{S}_1} d\vec{a} &= \oint_{\mathcal{S}_2} d\vec{a}
+\end{align}
+
+\item (d) For the kind of triangle described in the hint, $d\vec{a} = \frac{1}{2}\vec{r} \times d\vec{l}$, since the cross product can be interpreted as the area of a parallelogram and we need one half of that parallelogram.  Totalling all of the triangles around the surface:
+
+\begin{equation}
+\vec{a} = \oint d\vec{a} = \oint \frac{1}{2}\vec{r} \times d\vec{l}
+\end{equation}
+
+\item (e) Letting $T = \vec{c} \cdot \vec{r}$ in 1.61 (e), we find
+
+\begin{equation}
+- \oint (\vec{c} \cdot \vec{r}) d\vec{l} =  \int_{\mathcal{S}} \nabla (\vec{c} \cdot \vec{r}) \times d\vec{a}
+\end{equation}
+
+From the reading, we need a product rule for the gradient on the left side:
+
+\begin{align}
+\nabla (\vec{c} \cdot \vec{r}) &= \vec{c} \times (\nabla \times \vec{r}) + (\vec{c} \cdot \nabla)\vec{r} \\
+\nabla (\vec{c} \cdot \vec{r}) &= (\vec{c} \cdot \nabla)\vec{r} = \vec{c} \\
+(\nabla \times \vec{r} &= 0)
+\end{align}
+
+Using that result gives
+
+\begin{equation}
+\oint (\vec{c} \cdot \vec{r}) d\vec{l} =  -\int_{\mathcal{S}} \vec{c} \times d\vec{a} = - \vec{c} \times \vec{a} = \vec{a} \times \vec{c}
+\end{equation}
+
+Reversing the order of the cross-product removes the minus sign in the final step.
+
+\begin{equation}
+\vec{a} \times \vec{c} = \oint (\vec{c} \cdot \vec{r}) d\vec{l}
+\end{equation}
+\end{itemize}
+
+\section{Problem 1.63}
+
 \end{document}
