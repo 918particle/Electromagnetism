@@ -1,0 +1,51 @@
+\title{Warm-up for Electromagnetic Theory (PHYS330)}
+\author{Dr. Jordan Hanson - Whittier College Dept. of Physics and Astronomy}
+\date{\today}
+\documentclass[10pt]{article}
+\usepackage[a4paper, total={18cm, 27cm}]{geometry}
+\usepackage{hyperref}
+\usepackage{amsmath}
+\begin{document}
+\maketitle
+
+\section{Problem 1.54}
+
+Verify the divergence theorem for $\vec{v} = r^2 \cos\theta \hat{r} + r^2 \cos\phi \hat{theta} - r^2 \cos\theta \sin\phi \hat{\phi}$ over the octant of the sphere of radius $R$ with the center at the origin. \\ \\
+Break the problem into manageable pieces. (a) What is the divergence of the field? (b) What is the volume integral of it? \\ \\
+Divergence: $4r\cos\theta$. \\
+Volume integral of the divergence:
+\begin{equation}
+\int_0^R \int_0^{\pi/2} \int_0^{\pi/2} 4 r \cos\theta ~ r^2 \sin\theta dr d\theta d\phi = \frac{\pi R^4}{4}
+\end{equation}
+The surface integral has four parts. (a) Outer curved surface with $d\vec{a} = r^2 \sin\theta d\theta d\phi \hat{r}$, and the result is $\pi R^4/4$.  (b) The lower side is defined by $\theta = \pi/2$, and $d\vec{a} = -r^2 dr d\phi \hat{z}$.  What is $\hat{z}$ here ... $\hat{\theta}$. Consult back page of the book for conversions and set $\theta = \pi/2$.  The result is $R^4/4$. (c)  The left side is described by $\phi = 0$, and $d\vec{a} = r dr d\theta (-\hat{y}) = -r dr d\theta \hat{\phi}$.  However, the $\hat{\phi}$-component is zero for $\phi = 0$, so the surface integral is zero.  (d) The right side has $d\vec{a} = r dr d\theta \hat{\phi}$, and $\phi = \pi/2$.  This time, the surface integral for $\phi = \pi/2$ is not zero, and the result is $-R^4/4$.  Summing all the pieces, we find
+
+\begin{equation}
+\oint \vec{v} \cdot d\vec{a} = \frac{\pi R^4}{4}
+\end{equation}
+
+\section{Problem 1.55}
+
+Break the problem into the following pieces: (a) What is the curl of $\vec{v}$?  (b) What is the surface integral of the curl?  (c) How do we approach the line integral? \\ \\
+
+The curl may be evaluated in Cartesian coordinates: $\nabla \times \vec{v} = (b-a)\hat{k}$.  Form the surface integral:
+
+\begin{equation}
+\int (\nabla \times \vec{v}) \cdot d\vec{a} = (b-a) \pi R^2
+\end{equation}
+
+The integrand is a constant, and parallel to the area vector.  Thus, the constant moves outside the integral and we have just the area of the circle.  What is $d\vec{l}$ on the circle of radius $R$?  \textit{Cylindrical coordinates} work best to describe the situation: $d\vec{l} = ds \hat{s} + s d\phi \hat{\phi} + dz \hat{z}$.  However, $dz = 0$ and $ds = 0$, so we are left with $d\vec{l} = s d\phi \hat{\phi}$.  That makes the line integral $(s = R)$:
+
+\begin{equation}
+\oint \vec{v} \cdot d\vec{l} = \int_0^{2\pi} ay \hat{x} \cdot R d\phi \hat{\phi} + \int_0^{2\pi} bx \hat{y} \cdot R d\phi \hat{\phi} \label{eq:line1}
+\end{equation}
+
+Here are some useful conversions:
+\begin{itemize}
+\item $x = R\cos\phi$
+\item $y = R\sin\phi$
+\item $\hat{x} = 0 - \sin\phi \hat{\phi}$
+\item $\hat{y} = 0 + \cos\phi \hat{\phi}$
+\end{itemize}
+Substituting all of that into Eq. \ref{eq:line1} gives $(b-a) \pi R^2$.
+
+\end{document}

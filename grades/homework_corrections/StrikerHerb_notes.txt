@@ -1,7 +1,0 @@
-Striker Herb, Homework re-submission
-
-3.29: correct, and bonus!
-3.3: I don't fully understand...it says 3.3 but it looks like a multipole expansion problem.  Is this the problem from chapter 4?  The function k cos(theta) looks like either the polarization density P of the uniformly polarized sphere (chapter 4), or the boundary value problem with sigma(theta) = k P_1(cos(theta)).  But then I see you find that the n = 1 term has to be zero but the n = 3 term is not?  That's an octopole...sorry I'm confused.
-
-Thanks for your hard work this semester!
-Prof. Hanson
