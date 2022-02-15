@@ -260,4 +260,50 @@ Reversing the order of the cross-product removes the minus sign in the final ste
 
 \section{Problem 1.63}
 
+\begin{itemize}
+\item (a) If $\vec{v} = \hat{r}/r$, then
+
+\begin{equation}
+\nabla \cdot \vec{v} = \frac{1}{r^2}
+\end{equation}
+
+If we perform the surface integral of $\vec{v}$ over the sphere of radius $R$, we get $4\pi R$, and $4\pi$ if $R = 1$.  If we perform the volume integral over the sphere of radius with the divergence as the integrand, we also find $4\pi R$ (and $4\pi$ if $R = 1$).  So this result appears free of the problems we find with the divergence of $\hat{r}/r^2$.  The general form is
+
+\begin{equation}
+\nabla \cdot (\hat{r} r^n) = (n+2) r^{n-1}
+\end{equation}
+
+However, if $n = -2$, then the divergence theorem won't work unless $\nabla \cdot \hat{r}/r^2 = 4\pi \delta^3(\vec{r})$.
+
+\item Plugging the field into the spherical version of the curl neatly gives 0.  However, note that using 1.61 (b) invites a surface integral over $\vec{v} \times d\vec{a}$.  However, $\vec{v}$ and $d\vec{a}$ are parallel, if we consider the surface to be a spherical surface.  Since we get to choose the surface, the integrand is zero.
+
+\end{itemize}
+
+\section{Problem 1.64}
+
+\begin{itemize}
+\item (a) Using the definition of the Laplacian in spherical coordinates, we find
+
+\begin{equation}
+D(r,\epsilon) = \frac{3\epsilon^2}{4\pi} (r^2+\epsilon^2)^{-3/2}
+\end{equation}
+
+\item (b) Setting $r = 0$, we have (as $\epsilon \to 0$)
+
+\begin{equation}
+D(0,\epsilon) = \frac{3\epsilon^2}{4\pi} (\epsilon^2)^{-3/2} \propto \epsilon^{-1} \to \infty
+\end{equation}
+
+\item (c) In the numerator there is one factor of $\epsilon$, so as $\epsilon \to 0$, $D \to 0$ as long as the other term in the denominator ($r^2$) is not zero.
+
+\item (d) Using a trigonometric substitution $r = \epsilon \tan\theta$, one could show that
+
+\begin{equation}
+\int_{\rm space} d\tau D(r,\epsilon) = 3 \int_{0}^{\pi/2} \tan^2\theta \cos^3\theta d\theta
+\end{equation}
+
+Notice that when $r \to \infty$, $\theta \to \pi/2$. Now, we could hack away at the final integral, expanding the integrand in Taylor series until we all die, or we could cheat and look it up.  Let's use Wolfram Alpha, which tells us that the result is $1/3$ numerically. Thus, the 3 out front is muliplied by $1/3$ and the result is 1.  This implies that the $D$ function is a good model for the Dirac delta-function in three dimensions, as $\epsilon$ is small.
+
+\end{itemize}
+
 \end{document}
