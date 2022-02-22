@@ -1,4 +1,4 @@
-\title{Warm-up for Electromagnetic Theory (PHYS330)}
+\title{Solutions for Homework 1}
 \author{Dr. Jordan Hanson - Whittier College Dept. of Physics and Astronomy}
 \date{\today}
 \documentclass[10pt]{article}
@@ -10,7 +10,7 @@
 
 \section{Problem 1.54}
 
-Verify the divergence theorem for $\vec{v} = r^2 \cos\theta \hat{r} + r^2 \cos\phi \hat{theta} - r^2 \cos\theta \sin\phi \hat{\phi}$ over the octant of the sphere of radius $R$ with the center at the origin. \\ \\
+Verify the divergence theorem for $\vec{v} = r^2 \cos\theta \hat{r} + r^2 \cos\phi \hat{\theta} - r^2 \cos\theta \sin\phi \hat{\phi}$ over the octant of the sphere of radius $R$ with the center at the origin. \\ \\
 Break the problem into manageable pieces. (a) What is the divergence of the field? (b) What is the volume integral of it? \\ \\
 Divergence: $4r\cos\theta$. \\
 Volume integral of the divergence:
@@ -43,10 +43,10 @@ Here are some useful conversions:
 \begin{itemize}
 \item $x = R\cos\phi$
 \item $y = R\sin\phi$
-\item $\hat{x} = 0 - \sin\phi \hat{\phi}$
-\item $\hat{y} = 0 + \cos\phi \hat{\phi}$
+\item $\hat{x} = ... - \sin\phi \hat{\phi}$
+\item $\hat{y} = ... + \cos\phi \hat{\phi}$
 \end{itemize}
-Substituting all of that into Eq. \ref{eq:line1} gives $(b-a) \pi R^2$.
+The $...$ will be zero because those pieces are proportional to $\hat{s}$ and will be dotted with $\hat{\phi}$.  Substituting all of that into Eq. \ref{eq:line1} gives $(b-a) \pi R^2$.
 
 \clearpage
 
@@ -102,18 +102,18 @@ d\vec{l} &= dr \hat{r} \\
 \vec{v} \cdot d\vec{l} &= r \cos^2\theta ~ dr = 0
 \end{align}
 
-The second piece is in the $xy$-plane, with $\theta = \pi/2$ anmd $r = 1$.  In spherical coordinates:
+The second piece is in the $xy$-plane, with $\theta = \pi/2$, and $r = 1$.  In spherical coordinates:
 
 \begin{align}
-d\vec{l} &= d\phi \hat{\phi} \\
-\phi &= 0, ~ \theta = \pi/2 \\
-\vec{v} \cdot d\vec{l} &= r \cos^2\theta ~ dr = 0
+d\vec{l} &= r d\phi \hat{\phi} = d\phi \hat{\phi} \\
+\theta &= \pi/2 \\
+\vec{v} \cdot d\vec{l} &= 3 r d\phi = 3 d\phi ~~ (r = 1)
 \end{align}
 
 The result is
 
 \begin{equation}
-\int \vec{v} \cdot d\vec{l} = \int_{0}^{3\pi/2} 3 r d\phi = \frac{3\pi}{2}
+\int \vec{v} \cdot d\vec{l} = \int_{0}^{\pi/2} 3 r d\phi = \frac{3\pi}{2} ~~ (r = 1)
 \end{equation}
 
 The third piece is in the $z$-direction, with $y = 1$ and $x = 0$.  We have
@@ -302,7 +302,19 @@ D(0,\epsilon) = \frac{3\epsilon^2}{4\pi} (\epsilon^2)^{-5/2} \propto \epsilon^{-
 \int_{\rm space} d\tau D(r,\epsilon) = 3 \int_{0}^{\pi/2} \tan^2\theta \cos^3\theta d\theta
 \end{equation}
 
-Notice that when $r \to \infty$, $\theta \to \pi/2$. Now, we could hack away at the final integral, expanding the integrand in Taylor series until we all die, or we could cheat and look it up.  Let's use Wolfram Alpha, which tells us that the result is $1/3$ numerically. Thus, the 3 out front is muliplied by $1/3$ and the result is 1.  This implies that the $D$ function is a good model for the Dirac delta-function in three dimensions, as $\epsilon$ is small.
+Notice that when $r \to \infty$, $\theta \to \pi/2$. Notice that the integral is equivalent to
+
+\begin{equation}
+\int_{\rm space} d\tau D(r,\epsilon) = 3 \int_{0}^{\pi/2} \sin^2\theta \cos\theta d\theta
+\end{equation}
+
+Let $u = \sin\theta$, so that $du = \cos\theta d\theta$.  If $\theta = 0$, then $\sin\theta = 0$, and if $\theta = \pi/2$, then $\sin\theta = 1$. The integral becomes
+
+\begin{equation}
+\int_{\rm space} d\tau D(r,\epsilon) = 3 \int_{0}^{1} u^2 du = 1
+\end{equation}
+
+Thus, the $D(r,\epsilon)$ function obeys all the properties of a 3D delta function when $\epsilon \to 0$.
 
 \end{itemize}
 
