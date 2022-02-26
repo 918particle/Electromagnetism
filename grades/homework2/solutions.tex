@@ -1,0 +1,107 @@
+\title{Solutions for Homework 2}
+\author{Dr. Jordan Hanson - Whittier College Dept. of Physics and Astronomy}
+\date{\today}
+\documentclass[10pt]{article}
+\usepackage[a4paper, total={18cm, 27cm}]{geometry}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{tcolorbox}
+
+\def\rcurs{{\mbox{$\resizebox{.16in}{.08in}{\includegraphics{ScriptR}}$}}}
+\def\brcurs{{\mbox{$\resizebox{.16in}{.08in}{\includegraphics{BoldR}}$}}}
+\def\hrcurs{{\mbox{$\hat \rcurs$}}}
+
+\begin{document}
+\maketitle
+
+\section{Problem 2.5}
+
+\textit{Find the electric field a distance $z$ above the center of a circular loop of radius $r$ that carries a uniform line charge $\lambda$.} \\ \\
+
+Start by filling in the pieces of the Coulomb effect:
+
+\begin{equation}
+d\mathbf{E} = \frac{1}{4\pi\epsilon_0}\frac{dq'}{\rcurs^2}\hrcurs
+\end{equation}
+
+\begin{itemize}
+\item $\brcurs = z \hat{z} - R\hat{s}$
+\item $\rcurs = \sqrt{z^2 + R^2} = z\sqrt{1+(R/z)^2} = z\sqrt{1+\epsilon^2}$. (If $\epsilon \to 0$, this represents the far-field).
+\item $\rcurs^2 = z^2 + R^2$
+\item $\hrcurs = (\hat{z} - \epsilon \hat{s})/(1+\epsilon^2)^{1/2}$
+\item $dq' = \lambda R d\phi'$, because cylindrical coordinates are the correct choice here.
+\item Note that $\epsilon = R/z$, so if $z = 0$ then $\epsilon \to \infty$, and $\epsilon \to 0$ if $z \gg R$.
+\item $Q = 2\pi R\lambda$, the total charge.
+\end{itemize}
+
+Integrate to add up the $d\mathbf{E}$ to find $\mathbf{E}$:
+
+\begin{equation}
+\mathbf{E} = \frac{\lambda R}{4\pi\epsilon_0 z^2 (1+\epsilon^2)^{3/2}} \int_0^{2\pi} d\phi' (\hat{z} - \epsilon \hat{s})
+\end{equation}
+
+By symmetry, the $\hat{s}$ term evaluates to zero.  The result is
+
+\begin{equation}
+\mathbf{E} = \frac{2\pi\lambda R \hat{z}}{4\pi\epsilon_0 z^2 (1+\epsilon^2)^{3/2}} = \frac{Q\hat{z}}{4\pi\epsilon_0 z^2 (1+\epsilon^2)^{3/2}}
+\end{equation}
+
+Checks: $\mathbf{E} = 0$ if $z = 0$ because $\epsilon \to \infty$.  Also, we find the far-field effect if $z \ll R$, because $\epsilon \to 0$.  The units also check out.
+
+\section{Problem 2.6}
+
+\textit{Find the electric field a distance $z$ above a the center of a flat circular disc of radius $R$ that carries a uniform surface charge $\sigma$.  What does your formula give in the limit $R \to \infty$? Also check the case $z \gg R$.} \\ \\
+
+Start by filling in the pieces of the Coulomb effect:
+
+\begin{equation}
+d\mathbf{E} = \frac{1}{4\pi\epsilon_0}\frac{dq'}{\rcurs^2}\hrcurs
+\end{equation}
+
+\begin{itemize}
+\item $\brcurs = z\hat{z} - s\hat{s}$.  As in Problem 2.5, the $\hat{s}$-component will vanish upon integration.
+\item $\rcurs^2 = z^2 + s^2$
+\item $\hrcurs = (z\hat{z} - s\hat{s})/(z^2 + s^2)^{1/2}$
+\item $dq' = \sigma da' = s ds d\phi$, because cylindrical coordinates work best here.
+\item $Q = \pi R^2 \sigma$ is the total charge.
+\item Let $z\tan\theta = s$, so that $ds = z\sec^2\theta d\theta$, and $\theta_0 = \tan^{-1}(R/z)$
+\end{itemize}
+
+Integrate to add up the $d\mathbf{E}$ to find $\mathbf{E}$:
+
+\begin{align}
+\mathbf{E} &= \frac{\sigma}{2\epsilon_0} z \hat{z} \int_0^R \frac{s ds}{(s^2+z^2)^{3/2}} \\
+\mathbf{E} &= \frac{\sigma}{2\epsilon_0} \left.\cos\theta \right\vert_0^{\theta_0} \hat{z} = \frac{\sigma}{2\epsilon_0} \left( 1 - \cos\theta_0 \right) \hat{z}
+\end{align}
+
+We know what is $\tan\theta = R/z$, but what is $\cos\theta_0$?  (\textit{Hint: draw the triangle and then find the hypoteneuse}).  The result is
+
+\begin{equation}
+\mathbf{E} = \frac{\sigma \hat{z}}{2\epsilon_0}\left( 1 - \frac{z}{\sqrt{z^2 + R^2}}\right)
+\end{equation}
+
+The units check automatically because of the units of $\sigma$ (Coulombs per meter squared), and the $\epsilon_0$ in the denominator.  If $R \to \infty$, then the second term vanishes and the field is 
+
+\begin{equation}
+\mathbf{E} \to \frac{\sigma \hat{z}}{2\epsilon_0}
+\end{equation}
+
+This form of the field is the boundary condition near a charged surface.  To check the limit that $z \gg R$, first factor a $z$:
+
+\begin{equation}
+\mathbf{E} = \frac{\sigma \hat{z}}{2\epsilon_0} z \left( z^{-1} - (z^2 + R^2)^{-1/2}\right) = \frac{\sigma \hat{z}}{2\epsilon_0} z \left( z^{-1} - z^{-1} (1 + (R/z)^2)^{-1/2}\right)
+\end{equation}
+
+Now replace $(1+(R/z)^2)^{-1/2} \approx (1 - (1/2) (R/z)^2)$, and notice the $1/z$ terms cancel:
+
+\begin{equation}
+\mathbf{E} = \frac{\sigma \hat{z}}{2\epsilon_0}z\left( \frac{1}{2z} \left(\frac{R}{z}\right)^2 \right)
+\end{equation}
+
+Multiply top and bottom by $\pi$, and recall that $Q = \pi R^2$ to find the point-charge field:
+
+\begin{equation}
+\mathbf{E} = \frac{1}{4\pi\epsilon_0} \frac{Q \hat{z}}{z^2}
+\end{equation}
+
+\end{document}

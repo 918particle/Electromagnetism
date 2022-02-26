@@ -1,0 +1,61 @@
+\documentclass{beamer}
+\usetheme{metropolis}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\title{Electromagnetc Theory: PHYS330}
+\author{Jordan Hanson}
+\institute{Whittier College Department of Physics and Astronomy}
+
+\begin{document}
+\maketitle
+
+\section{Class Notes}
+
+\begin{frame}{Solutions to Warm Up}
+\textit{Hint:} 2D Curl.
+
+\begin{equation}
+\nabla \times \mathbf{E} = \hat{z} \left( \frac{\partial E_y}{\partial x} - \frac{\partial E_x}{\partial y} \right) = 0
+\end{equation}
+
+\begin{equation}
+\frac{\partial E_y}{\partial x} = \frac{\partial E_x}{\partial y}
+\end{equation}
+
+\end{frame}
+
+\begin{frame}{Solutions to Warm Up}
+\textit{Hint:} Get the $\mathbf{E}$-field.
+
+\begin{equation}
+\mathbf{E} = \frac{1}{4\pi\epsilon_0} \frac{q}{r^2} \hat{r}
+\end{equation}
+(a):
+\begin{equation}
+V(\mathbf{r}) = - \int_{\infty}^{\mathbf{r}} \frac{1}{4\pi\epsilon_0} \frac{q}{r'^2} dr' = \frac{1}{4\pi\epsilon_0} \frac{q}{r}
+\end{equation}
+(b):
+\begin{equation}
+V(\mathbf{r}) = - \int_{\infty}^{\mathbf{r}} \mathbf{E} \cdot d\mathbf{l} = - \int_{\infty}^{R} \frac{k q}{r'^2} \hat{r} \cdot dr' \hat{r} - \int_{R}^{\mathbf{r}} 0 \cdot d\mathbf{l}
+\end{equation}
+\begin{equation}
+V(\mathbf{r}) = \frac{1}{4\pi\epsilon_0} \frac{q}{R}
+\end{equation}
+\end{frame}
+
+\section{Laplace's Equation}
+
+\begin{frame}{Laplace's Equation in 1D}
+\begin{equation}
+\nabla^2 V = 0
+\end{equation}
+\begin{equation}
+\frac{d^2V}{dx^2} = 0
+\end{equation}
+This implies:
+\begin{equation}
+V(x) = a x + V_0
+\end{equation}
+\end{frame}
+
+\end{document}
