@@ -157,4 +157,111 @@ The final result is
 \mathbf{E}(\mathbf{r}) = \frac{\rho \mathbf{r}}{3\epsilon_0} = \frac{\rho r\hat{r}}{3\epsilon_0}
 \end{equation}
 
+\section{Problem 2.16}
+
+\textit{A long coaxial cable carries a uniform volume charge density $\rho$ on the inner cylinder (radius a), and a uniform surface charge density on the outer cylindrical shell (radius b). This surface charge is negative and is of just the right magnitude that the cable as a whole is electrically neutral.  Find the electric field in each of the three regions: (i) inside the inner cylinder $(s < a)$, (ii) between the cylinders $(a < s < b)$, (iii) outside the cable $(s > b)$.  Plot $|\mathbf{E}|$ as a function of $s$.}
+
+\begin{itemize}
+\item $(s < a)$: By symmetry, $\mathbf{E} \propto \hat{s}$, and we simplify Gauss' Law to read 
+\begin{align}
+\mathbf{E} \cdot \mathbf{A} &= \frac{Q}{\epsilon_0} \\
+E (2\pi s) z &= \frac{1}{\epsilon_0}\int \rho' d\tau' \\
+E (2\pi s) z &= \frac{1}{\epsilon_0}\int_0^s \rho s'ds' (2\pi) z \\
+\mathbf{E} &= \rho \frac{s\hat{s}}{2\epsilon_0}
+\end{align}
+\item $(a < s < b)$: By symmetry, $\mathbf{E} \propto \hat{s}$, and we simplify Gauss' Law to read
+\begin{align}
+\mathbf{E} \cdot \mathbf{A} &= \frac{Q}{\epsilon_0} \\
+E (2\pi s) z &= \rho (\pi a^2 z)/\epsilon_0 \\
+\mathbf{E} &= \frac{\rho a^2}{2 s \epsilon_0}\hat{s}
+\end{align}
+\item $(s > b)$: The cable is electrically neutral, so our Gaussian surface contains the same amount of positive and negative charge.  Thus:
+\begin{equation}
+\mathbf{E} = \mathbf{0}
+\end{equation}
+\end{itemize}
+
+The graph should show that $\mathbf{E}$ is linearly increasing until $s = a$, after which it falls as $1/s$.  Outside, it drops to zero.
+
+\section{Problem 2.18}
+
+\textit{Two spheres, each of radius $R$ and carrying uniform volume charge densities $\rho$ and $-\rho$, respectively, are placed so that they partially overlap.  Call the vector from the positive center to the negative center $\mathbf{d}$.  Show that the field in the region of overlap is constant, and find its value.  Use the answer to Problem 2.12.} \\ \\
+
+Suppose the observer is at a point $P$ within the overlap region, and $\mathbf{r}_{+}$ and $\mathbf{r}_{-}$ are the displacements from positive and negative sphere centers to $P$, respectively.  If $\mathbf{d}$ points from the positive center to the negative center, then
+
+\begin{equation}
+\mathbf{d} = \mathbf{r}_{+} - \mathbf{r}_{-} \label{eq:d}
+\end{equation}
+
+Using the field result from 2.12 to sum the contributions from positive and negative spheres, and Eq. \ref{eq:d}, we find
+
+\begin{align}
+\mathbf{E} &= \frac{\rho\mathbf{r}_{+}}{3\epsilon_0} - \frac{\rho\mathbf{r}_{-}}{3\epsilon_0} \\
+\mathbf{E} &= \frac{\rho\mathbf{d}}{3\epsilon_0}
+\end{align}
+
+\section{Problem 2.25}
+
+\textit{Using equations describing the potential of point, line, and surface charges, find the potential at a distance $z$ above the center of (i) a pair of positive charges separated by a distance $d$, (ii) a line charge of length $2L$, and (iii) a uniform surface charge spread into a disc of radius $R$.  Compute $\mathbf{E} = -\nabla V$ in each case, and check the results for the fields against prior results.  What is the value of the potential at the same point above the pair of charges if the right-hand one is negative?  What does that suggest about the direction of the field?  Compare this to prior results carefully.} \\ \\
+
+Let $k = 1/(4\pi\epsilon_0)$. The situation for each distribution is summarized below.
+
+\begin{itemize}
+\item \textbf{Pair of point charges:} The displacement between each charge and $P = z$ is the same: $\rcurs = \sqrt{z^2 + \frac{1}{4}d^2}$.  Thus, the total potential is
+\begin{equation}
+V(z) = \frac{2kq}{\rcurs} = \frac{2 k q}{(z^2 + \frac{1}{4}d^2)^{1/2}}
+\end{equation}
+Compute the field by taking the negative gradient:
+\begin{equation}
+-\frac{dV}{dz}\hat{z} = \frac{2 k q z \hat{z}}{(z^2 + \frac{1}{2}d^2)^{3/2}}
+\end{equation}
+That does match our result from earlier.
+\item \textbf{The line charge of length $2L$:} Let the charge density be $\lambda$.  The contribution to the potential from $dq' = \lambda dx'$ is
+\begin{equation}
+dV = \frac{k \lambda dx'}{(x'^2 + z^2)^{1/2}}
+\end{equation}
+The integral can be done via trigonometric substitution or simply looking it up in a table:
+\begin{equation}
+V(z) = k\lambda \ln \left(\frac{\sqrt{z^2 + L^2} + L}{\sqrt{z^2 + L^2} - L}\right)
+\end{equation}
+Taking the negative derivative with respect to $z$, following the chain rule inside the logarithm, and simplifying yields
+\begin{equation}
+\mathbf{E} = 2kL\lambda \frac{1}{z\sqrt{z^2 + L^2}}\hat{z}
+\end{equation}
+This agrees with prior results and checks out in the far-field limit.
+\item \textbf{The disc of charge with radius $R$, with density $\sigma$:}
+\begin{equation}
+dV = \frac{k dq'}{\rcurs} = \frac{k \sigma da'}{\sqrt{s'^2 + z^2}} = \frac{k\sigma s'ds'd\phi'}{\sqrt{s'^2 + z^2}}
+\end{equation}
+Perform the integral:
+\begin{equation}
+V(z) = \frac{\sigma}{2\epsilon_0}\left( \sqrt{R^2+z^2} - z \right)
+\end{equation}
+The negative gradient shows us that
+\begin{equation}
+\mathbf{E} = \frac{\sigma}{2\epsilon_0}\left(1 - \frac{z}{\sqrt{z^2 + R^2}}\right)\hat{z}
+\end{equation}
+This agrees with our prior result for the $\mathbf{E}$-field.
+\item If we swap the right-hand charge from positive to negative, then $V(z) = 0$ on the whole z-axis.  We shouldn't conclude that $\mathbf{E} = 0$ because we only know that $dV/dz = 0$.  Examining the charges again, we can sketch the field to find that it now points in the x-direction, so $dV/dx \neq 0$.
+\end{itemize}
+
+\section{Problem 2.29}
+
+\textit{Check that the Laplacian of the volume integral that defines potential gives the charge density.  That is, show that $\nabla^2 V(\mathbf{r}) = -\rho/\epsilon_0$.} \\ \\
+The electrostatic potential, in general, is
+\begin{equation}
+V(\mathbf{r}) = \frac{1}{4\pi\epsilon_0}\int \frac{\rho(\mathbf{r}') d\tau'}{\rcurs}
+\end{equation}
+The key to this argument is that the $\nabla^2$ operator acts on functions of $\mathbf{r}$, not $\mathbf{r}'$.  Thus,
+\begin{equation}
+\nabla^2 V(\mathbf{r}) = \frac{1}{4\pi\epsilon_0}\int \rho(\mathbf{r}') d\tau'\nabla^2 \left(\frac{1}{\rcurs}\right) \label{eq:V}
+\end{equation}
+\textbf{But due to our diligence on the last assignment} ... we see that
+\begin{equation}
+\nabla^2 \left(\frac{1}{\rcurs}\right) = -4\pi\delta^3(\mathbf{r}-\mathbf{r}')
+\end{equation}
+Substituting the $\delta$-function into Eq. \ref{eq:V}:
+\begin{equation}
+\nabla^2 V(\mathbf{r}) = -\frac{4\pi}{4\pi\epsilon_0} \int \rho(\mathbf{r}')\delta^3(\mathbf{r}-\mathbf{r}')d\tau' = \rho(\mathbf{r})/\epsilon_0
+\end{equation}
 \end{document}
