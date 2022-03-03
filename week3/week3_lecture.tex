@@ -102,7 +102,7 @@ Let $V(x) = m x + b$.  If $V(-a) = V_0$, and $V(a) = -V_0$, what is the electric
 Suppose a potential function $V(x,y) \propto \left(A\exp(-kx) + B\exp(kx)\right)$.  Which of the following is true, if $V \to 0$ as $x \to \infty$?
 \begin{itemize}
 \item A: $A$ is 0
-\item B: $A$ is 0
+\item B: $B$ is 0
 \item C: $A$ and $B$ are 0
 \item D: Neither $A$ nor $B$ is 0
 \end{itemize}
@@ -157,7 +157,7 @@ Hyperbolic trigonometric functions are solutions to which equation?
 \begin{frame}{Boundary Conditions}
 \alert{\textbf{Fourier's Trick}}: Imagine a vector with $n$ components:
 \begin{equation}
-\vec{v} = \sum_{i = 1}^n c_n \hat{x}_i
+\vec{v} = \sum_{i = 1}^n c_i \hat{x}_i
 \end{equation}
 In words, how do you solve for some $c_m$?
 \begin{itemize}
@@ -171,7 +171,7 @@ In words, how do you solve for some $c_m$?
 \begin{frame}{Boundary Conditions}
 \alert{\textbf{Fourier's Trick}}: Imagine a vector with $n$ components:
 \begin{equation}
-\vec{v} = \sum_{i = 1}^n c_n \hat{x}_i
+\vec{v} = \sum_{i = 1}^n c_i \hat{x}_i
 \end{equation}
 In words, how do you solve for some $c_m$? Note that:
 \begin{equation}
@@ -187,7 +187,7 @@ Why?  Because
 \begin{frame}{Boundary Conditions}
 \alert{\textbf{Fourier's Trick}}: Imagine a known function that happens to be equal to a sum:
 \begin{equation}
-f(x) = \sum_{i = 1}^{\infty} c_n g_n(x)
+f(x) = \sum_{i = 1}^{\infty} c_i g_i(x)
 \end{equation}
 In words, how do you solve for some $c_m$?
 \begin{itemize}
@@ -201,21 +201,21 @@ In words, how do you solve for some $c_m$?
 \begin{frame}{Boundary Conditions}
 If it's true that a function can be written as an infinite series of functions with coefficients:
 \begin{equation}
-f(x) = \sum_{i = 1}^{\infty} c_n g_n(x)
+f(x) = \sum_{i = 1}^{\infty} c_i g_i(x)
 \end{equation}
 Then the functions $g_n(x)$ are said to be \textbf{\alert{complete}}, or a complete basis (just like vectors are a sum of basis vectors. Examples of complete sets of functions:
 \begin{itemize}
-\item sines and cosines (Fourier series) with the right frequencies
+\item sines and cosines (Fourier series)
 \item exponentials with the right rates multiplying $x$
 \item Hyperbolic trigonometric functions (follows from exponentials)
-\item Taylor series (polynomials with special coefficients: derivatives).
+\item Taylor series (polynomials with derivatives as coefficients)
 \end{itemize}
 \end{frame}
 
 \begin{frame}{Boundary Conditions}
-The functions $g_n(x)$ are said to be \textbf{\alert{orthogonal}} if
+The functions $f_n(x)$ are said to be \textbf{\alert{orthogonal}} if
 \begin{equation}
-\int_0^a f_n(y) f_m(y) dy = \delta_{n,m}0
+\int_0^a f_n(y) f_m(y) dy = \delta_{n,m}
 \end{equation}
 One example:
 \begin{equation}
@@ -277,20 +277,7 @@ V(r,\theta) = R(r) \Theta (\theta)
 \begin{frame}{Separation of Variables}
 The radial equation is
 \begin{equation}
-\frac{1}{R} \frac{d}{dr}\left(r^2 \frac{dR}{dr} \right) = l(l+1)
-\end{equation}
-Exercise: show that the solution is 
-\begin{equation}
-R(r) = A r^l + B r^{-(l+1)}
-\end{equation}
-(The derivative operator distributes over addition, so the two solutions can be checked separately, or together). \\ \vspace{0.5cm}
-\textbf{What are the units of $R(r)$?  What are the units of $A$ and $B$?}
-\end{frame}
-
-\begin{frame}{Separation of Variables}
-The radial equation is
-\begin{equation}
-\frac{1}{R} \frac{d}{dr}\left(r^2 \frac{dR}{dr} \right) = l(l+1)R(r)
+\frac{1}{R(r)} \frac{d}{dr}\left(r^2 \frac{dR}{dr} \right) = l(l+1)
 \end{equation}
 Exercise: show that the solution is 
 \begin{equation}
@@ -303,7 +290,7 @@ R(r) = A r^l + B r^{-(l+1)}
 \begin{frame}{Separation of Variables}
 The polar equation is
 \begin{equation}
-\frac{d}{d\theta}\left(\sin\theta \frac{d\Theta}{d\theta} \right) = -l(l+1)\sin\theta \Theta(\theta)
+\frac{1}{\Theta(\theta)}\frac{d}{d\theta}\left(\sin\theta \frac{d\Theta}{d\theta} \right) = -l(l+1)\sin\theta
 \end{equation}
 The solutions are \alert{complete}, and \alert{orthogonal}, and known as Legendre polynomials:
 \begin{equation}
@@ -322,16 +309,9 @@ P_3(x) = (5x^3 - 3x)/2
 \end{equation}
 \alert{\textbf{What is the result of the following integrals?}}
 \begin{align}
-I_1 &= \int_{-1}^{1} P_2(x) P_3(x) dx \\
-I_2 &= \int_{-1}^{1} P_3(x) P_3(x) dx
+I_1 &= \int_{-1}^{1} P_1(x) P_2(x) dx \\
+I_2 &= \int_{-1}^{1} P_2(x) P_2(x) dx
 \end{align}
-If the integer $l$ is \textit{even/odd}, the $l$-th order Legendre polynomial will be
-\begin{itemize}
-\item A: odd/even
-\item B: odd/odd
-\item C: even/even
-\item D: even/odd
-\end{itemize}
 \end{frame}
 
 \begin{frame}{Separation of Variables}
