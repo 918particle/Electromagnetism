@@ -1,0 +1,36 @@
+\title{Warm-Up for March 4th, 2022}
+\author{Dr. Jordan Hanson - Whittier College Dept. of Physics and Astronomy}
+\date{\today}
+\documentclass[12pt]{article}
+\usepackage[a4paper, total={18cm, 27cm}]{geometry}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{bm}
+\begin{document}
+\maketitle
+
+\section{Memory Bank}
+
+\begin{enumerate}
+\item The \textbf{Fourier series} representation of a function $f(x)$ is written:
+\begin{equation}
+S(x) = \frac{A_0}{2}+\sum_{i=1}^{\infty} \left( A_n \cos(nx) + B_n \sin(nx) \right)
+\end{equation}
+with
+\begin{align}
+A_n &= \frac{1}{\pi} \int_0^{2\pi} f(x) \cos(nx) dx \\
+B_n &= \frac{1}{\pi} \int_0^{2\pi} f(x) \sin(nx) dx
+\end{align}
+\end{enumerate}
+
+\section{Representing a Solution with a Fourier Series}
+
+Suppose we have an arrangement of charge such that we can create a \textit{periodic} potential:
+
+\begin{equation}
+f(x) = x, ~~ 0 \leq x \leq 2\pi
+\end{equation}
+
+Between $2\pi$ and $4\pi$, $f(x) = (x-2\pi)$, etc., so that the function repeats.  (a) Use the formulas in the memory bank to determine $A_n$ and $B_n$.  (b) Can you graph the series and the function together, to see if they match?
+
+\end{document}
