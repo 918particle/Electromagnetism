@@ -213,13 +213,13 @@ Then the functions $g_n(x)$ are said to be \textbf{\alert{complete}}, or a compl
 \end{frame}
 
 \begin{frame}{Boundary Conditions}
-The functions $f_n(x)$ are said to be \textbf{\alert{orthogonal}} if
+The functions $f_n(x)$ are said to be \textbf{\alert{orthogonal}} for $x \in [a,b]$ if
 \begin{equation}
-\int_0^a f_n(y) f_m(y) dy = \delta_{n,m}
+\int_a^b f_n(y) f_m(y) dy = \delta_{n,m}
 \end{equation}
 One example:
 \begin{equation}
-I_{n,m} = \int_L^{-L} \frac{\sin(n\pi x/L)}{\sqrt{L}}\frac{\sin(m\pi x/L)}{\sqrt{L}} dx
+I_{n,m} = \int_{-L}^{L} \frac{\sin(n\pi x/L)}{\sqrt{L}}\frac{\sin(m\pi x/L)}{\sqrt{L}} dx
 \end{equation}
 What is the result of this integral?  How would you approach solving this?
 \end{frame}
