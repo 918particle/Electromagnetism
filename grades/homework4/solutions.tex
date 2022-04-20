@@ -128,9 +128,30 @@ Inserting all these into into Eq. \ref{eq:W}, and integrating:
 W = \frac{Q^2}{8\pi\epsilon_0(1+\chi_e)}\left( \frac{1}{a}+\frac{\chi_e}{b}\right)
 \end{equation}
 
-\section{Proble 4.35}
+\section{Problem 4.35}
 
-\textit{A}
+\textit{A point charge $q$ is in embedded at the center of a sphere of linear dielectric material (with susceptibility $\chi_e$ and radius $R$).  Find the electric field, the polarization, and the bound charge densities, $\sigma_b$ and $\rho_b$.  What is the total bound charge on the surface? Where is the compensating negative bound charge located?}
+
+\begin{itemize}
+\item Use Gauss' Law with electric displacement: $\mathbf{D} = q/(4\pi r^2)\hat{\mathbf{r}}$.
+\item The electric field is then $\mathbf{E} = \mathbf{D}/\epsilon$, or
+\begin{equation}
+\mathbf{E} = \frac{q}{4\pi \epsilon_0 (1+\chi_e)r^2}\hat{\mathbf{r}}
+\end{equation}
+\item For polarization, note that linear dielectrics have $\mathbf{P} = \epsilon_0 \chi_e \mathbf{E}$, so
+\begin{equation}
+\mathbf{P} = \left(\frac{\chi_e}{1+\chi_e}\right)\mathbf{D}~=~\left(\frac{\chi_e}{1+\chi_e}\right)\left(\frac{q}{4\pi r^2}\right) \hat{\mathbf{r}}
+\end{equation}
+\item The surface and volume bound charge densities are:
+\begin{align}
+\sigma_b = \mathbf{P} \cdot \hat{\mathbf{r}} &= \left(\frac{\chi_e}{1+\chi_e}\right)D \\
+\rho_b &= -\nabla \cdot \mathbf{P} = -q\left(\frac{\chi_e}{1+\chi_e}\right) \delta^3(\mathbf{r})
+\end{align}
+\item The total surface bound charge is $Q = q \left(\frac{\chi_e}{1+\chi_e}\right)$, but the negative compensating charge is at the origin:
+\begin{equation}
+Q = \int \rho_b d\tau = -q \left(\frac{\chi_e}{1+\chi_e}\right)
+\end{equation}
+\end{itemize}
 
 \end{document}
 
