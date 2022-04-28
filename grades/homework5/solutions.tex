@@ -1,0 +1,62 @@
+\title{Solutions for Homework 5}
+\author{Dr. Jordan Hanson - Whittier College Dept. of Physics and Astronomy}
+\date{\today}
+\documentclass[10pt]{article}
+\usepackage[a4paper, total={18cm, 27cm}]{geometry}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{tcolorbox}
+
+\def\rcurs{{\mbox{$\resizebox{.16in}{.08in}{\includegraphics{ScriptR}}$}}}
+\def\brcurs{{\mbox{$\resizebox{.16in}{.08in}{\includegraphics{BoldR}}$}}}
+\def\hrcurs{{\mbox{$\hat \rcurs$}}}
+
+\begin{document}
+\maketitle
+
+\section{Problem 5.4}
+
+\textit{Suppose that the magnetic field in some region has the form}
+
+\begin{equation}
+\mathbf{B} = kz \hat{\mathbf{x}}
+\end{equation}
+\noindent
+\textit{(where k is a constant).  Find the force on a square loop (side a), lying in the $yz$-plane and centered at the origin, if it arries a current $I$, flowing counterclockwise, when you look down the $x$ axis.} \\ \\
+Using $\mathbf{F} = I\mathbf{L} \times \mathbf{B}$, the Lorentz force for current in a magnetic field, we find 
+\begin{equation}
+\mathbf{F}_{\rm net} = Ika^2\hat{\mathbf{z}}
+\end{equation}
+
+\section{Problem 5.7}
+
+\textit{For a configuration of charges and currents confined within a volume $\mathcal{V}$, show that}
+
+\begin{equation}
+\int \mathbf{J} d\tau = \frac{d\mathbf{p}}{dt}
+\end{equation}
+\noindent
+\textit{where $\mathbf{p}$ is the total dipole moment. [Hint: evaluate $\int_\mathcal{V} \nabla \cdot (x \mathbf{J}) d\tau$].} \\ \\
+\noindent
+Folliwing the hint, keeping in mind that $\mathcal{V}$ contains all currents and charges (so none penetrate the surface $\mathcal{S}$ enclosing $\mathcal{V}$):
+
+\begin{align}
+\nabla \cdot (x \mathbf{J}) =& ~ x (\nabla \cdot \mathbf{J}) + \mathbf{J} \cdot (\nabla x) = -x \frac{\partial \rho}{\partial t} + J_x \\
+\int_{\mathcal{V}} \nabla \cdot (x \mathbf{J}) d\tau =& \int_{\mathcal{V}} \left( -x \frac{\partial \rho}{\partial t} + J_x \right) d\tau \\
+\int_{\mathcal{V}} \nabla \cdot (x \mathbf{J}) d\tau &= \oint_{\mathcal{S}} (x \mathbf{J}) \cdot d\mathbf{a} = 0 \\
+\int_{\mathcal{V}} \left( -x \frac{\partial \rho}{\partial t} + J_x \right) d\tau &= 0 \\
+\int_{\mathcal{V}} x \frac{\partial \rho}{\partial t} d\tau &= \int_{\mathcal{V}} J_x d\tau \\
+\int_{\mathcal{V}} y \frac{\partial \rho}{\partial t} d\tau &= \int_{\mathcal{V}} J_y d\tau \\
+\int_{\mathcal{V}} z \frac{\partial \rho}{\partial t} d\tau &= \int_{\mathcal{V}} J_z d\tau
+\end{align}
+\noindent
+Combine the same arguement used for $x$ with the copies of it for $y$ and $z$.  Multiply by the corresponding unit vector on both sides of each each equation, and sum.  Then, switch the order of the time-derivative with the volume integration:
+
+\begin{equation}
+\int_\mathcal{V} \mathbf{J} d\tau = \frac{d}{dt}\int \mathbf{r} \rho d\tau = \frac{d\mathbf{p}}{dt}
+\end{equation}
+\noindent
+In words, the volume integration of all current densities in a closed space is the time-derivative of the dipole moment of all charge.
+
+\end{document}
+
