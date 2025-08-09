@@ -1,103 +1,104 @@
-\title{Syllabus for Electromagnetic Theory (PHYS330)}
+\title{Syllabus for Electromagnetic Theory: PHYS330}
 \author{Dr. Jordan Hanson - Whittier College Dept. of Physics and Astronomy}
 \date{\today}
 \documentclass[10pt]{article}
 \usepackage[a4paper, total={18cm, 27cm}]{geometry}
 \usepackage{outlines}
 \usepackage{hyperref}
+
 \begin{document}
 \maketitle
 
+
 \begin{abstract}
-Maxwell's Equations govern the electromagnetic fields that constitute electrodynamics.  However, an understanding of Maxwell's equations must be built from the fundamental building blocks of vector calculus, bound and free electric charge, electrostatics and electric potential, magnetostatics and magnetic vector potential, and the continuity of free and bound current.  These building blocks will be presented in the traditional order, as shown in \textit{Introduction to Electrodynamics} by D. Griffiths.  Although the course culimates with the presentation of Maxwell's Equations, special topics will be covered along the way.  These include multipole expansions, Fourier transforms and Fourier analysis, and numerical simulation methods.  
+This course provides a rigorous exploration of classical electrodynamics, including new computational electromagnetism (CEM) content.  The course begins with a review of vector calculus and its physical interpretation in electromagnetism.  Next, the electrostatics of charge distributions using Coulomb's law, Gauss's law, and the electric potential will be presented. The course proceeds to boundary-value problems and solutions to Laplace's equation, including multipole expansions and the method of images.  Building on the introductory content, the course procedes to properties and behavior of electric fields in matter, covering polarization, bound charges, and the electric displacement field.  From electrostatics, the course proceeds to magnetostatics, introducing the Biot–Savart law, Amp\`{e}re's law, vector potential, and the role of magnetization in materials.  New CEM content serves as an introduction to time-dependent electromagnetic fields.  Throughout the course, emphasis is placed on analytical problem-solving through active learning strategies.  Final projects allow students to creatively explore scientific and engineering applications of electrodynamics and CEM.
 \end{abstract}
 \noindent
-\textit{\textbf{Pre-requisites}:  Calculus-based Physics 1-3, Calculus 1-3, and Modern Physics.} \\
+\textit{\textbf{Pre-requisites}: PHYS150, PHYS180, PHYS185, PHYS275, MATH141, MATH142, MATH241} \\
 \textit{\textbf{Course credits, Liberal Arts Categorization}: 3.0 Credits, None} \\
-\textit{\textbf{Regular course hours}: MWF 10:00-10:50, SLC 228.  \textit{Zoom ID/pass}: 796 092 0745 / 667725. } \\
-\textit{\textbf{Instructor contact information}: Email: jhanson2@whittier.edu, Zoom ID / pass: 796 092 0745 / 667725, YouTube: \url{www.youtube.com/918particle}, Book office hours: \url{https://fgucmvjkylvmgqfsco.10to8.com}} \\
-\textit{\textbf{Office hours}: Please use the booking service to schedule Zoom meetings for office hours and advising.} \\
-\textit{\textbf{Attendance/Absence}: As this is an advanced course, there is no attendance policy. Students will hold themselves accountable, and the chances of passing the course increase substantially with regular class attendance.} \\ 
+\textit{\textbf{Regular course hours}: TR 11:00am-12:20pm, SLC 232.} \\
+\textit{\textbf{Instructor contact information}: Discord: 918particle, Email: jhanson2@whittier.edu, Office: SLC 212.} \\
+\textit{\textbf{Office hours}: Open-door policy, or make an appointment via Discord/email.} \\
+\textit{\textbf{Attendance/Absence}: Students needing to reschedule midterms must notify the professor a few days in advance.} \\ 
 \textit{\textbf{Late work policy}: Late work is generally not accepted, but is left to the discretion of the instructor.} \\
-\textit{\textbf{Text}: Introduction to Electrodynamics, 4th ed. by D. Griffiths - \url{https://en.wikipedia.org/wiki/Introduction_to_Electrodynamics}}. \\
-\textit{\textbf{Grading}: There will be weekly homework sets worth 50 percent of the grade, typically due Mondays.  Homework problems are challenging in this subject, and some collaboration is expected.  There will be in-class warm-up problems that will be graded for completion, and worth 10 percent of the grade.  There will be one midterm exam worth 20 percent of the grade.  There will be no final exam for the course.  Instead, there will be a final project, plus a presentation to the class.  The project will be worth 20 percent of the grade.  See Tab. \ref{tab:grading}.}
+\textit{\textbf{Text}: Introduction to Electrodynamics, 5th ed. by D. Griffiths - \url{
+https://doi.org/10.1017/9781009397735}}. \\
+\textit{\textbf{Grading}: In-class warm-up exercises are marked only for attendance, and worth 10 percent of the grade.  Weekly homework sets are intented to be challenging, and student collaboration is expected.  Two short, open-book midterm exams will be completed outside of class.  There is no final exam for the course.  A final project and class presentation will be completed near the end of the semester.  See Tab. \ref{tab:grading}.}
 \begin{table}
 \centering
-\begin{tabular}{| c | c | c |}
+\begin{tabular}{| c | c | c | c |}
 \hline
-Item & Fraction of Grade & Note \\ \hline
-Homework & 50\% & Submit in PDF Form to Moodle \\ \hline
-Warm Ups & 10\% & Graded for Completion \\ \hline
-Midterm Exam & 20\% & Take-home style, open-book \\ \hline
-Final Project and Presentation & 20\% & Live or digital (see \textbf{Final Projects} above). \\ \hline
+\textbf{Assignment} & \textbf{Weight} & \textbf{Assigned} & \textbf{Due}\\ \hline
+Problem Sets & 40\% & Altenate Fridays & Two weeks after assigned \\ \hline
+Midterm 1 & 15\% & Friday, December 5th, 2025 & Monday, December 8th, 2025 \\ \hline
+Midterm 2 & 15\% & Friday, December 5th, 2025 & Monday, December 8th, 2025 \\ \hline
+Final Project Proposal & 10\% & Friday, October 31st, 2025 & Friday, November 7th, 2025 \\ \hline
+Final Project Presentation & 20\% & Friday, October 31st, 2025 & Thursday, December 4th, 2025 \\ \hline
 \end{tabular}
-\caption{\label{tab:grading} Grading percentages for PHYS330.}
+\caption{\label{tab:grading} Assignments for Electromagnetic Theory (PHYS330).}
 \end{table} \\
 \textit{\textbf{Grade Settings}: $<60\%$ = F, $\geq 60\%, <70\%$ = D, $\geq 70\%, <80\%$ = C, $\geq 80\%, <90\%$ = B, $\geq 90\%, <100\%$ = A.  Pluses and minuses: 0-3\% minus, 3\%-6\% straight, 6\%-10\% plus (e.g. 79\% = C+, 91\% = A-)} \\
-\textit{\textbf{Homework Sets}: Five to ten problems per week, assigned and collected on Fridays via Moodle PDF submission.} \\
-\textit{\textbf{Final projects}: The final project will involve one of two types of topic: A) a more lengthy or challenging problem to teach the class, or B) a computational electromagnetism (CEM) example.  The final presentation should be longer, approximately 20 minutes.  Students should begin gathering and/or sharing data early on in the course to facilitate creation of the final presentation.  The presentation can be in traditional format or as a digital storytelling project.  For digital storytelling projects, Whittier College has a site license for the online video editing package WeVideo.  A short WeVideo tutorial will be given as part of the course.} \\
-\textit{\textbf{Statement on Disability Services}: Whittier College is committed to make learning experiences as accessible as possible. If you experience physical or academic barriers due to a disability, you are encouraged to contact Student Disability Services (SDS) to discuss options. To learn more about academic accommodations, please email disabilityservices@whittier.edu.} \\
-\textit{\textbf{Mental Health Resources:} Counseling services for enrolled students are offered at no charge and will be offered remotely during periods of remote learning. When we return to campus, in person and remote/telehealth services will be offered. Schedule an appointment by emailing counselingcenter@whittier.edu  or by phone, 562-907-4239 (between 8am – 5pm; M-F). For support after 5pm, you may call the After-Hours RN Telephone Advice Line at 562.454.4548 (press option 1); for mental health emergencies contact Campus Safety at 562-907-4211; Digital mental health platform at \url{https://you.whittier.edu/}} \\ \\
-\textit{\textbf{Changes due to COVID-19}:
-\begin{enumerate}
-\item Class will meet daily using the Zoom web-conferencing until February 21st, 2022.  Class time will be used to review course status, homework, student questions, and work examples.  Content will also be delivered via the reading and video tutorials on the instructor YouTube channel.
-\item It is critical that students take advantages of one-on-one meetings with the professor.  Please book an appointment time via 10to8.com: \url{https://fgucmvjkylvmgqfsco.10to8.com}.  Appointments may be used for homework help, example problems, polishing of final project ideas, and general help with the course.
-\end{enumerate}}
+\textit{\textbf{Final projects}: Students may contribute one of two types of final project: A) a more lengthy or challenging problem to teach the class, or B) a computational electromagnetism (CEM) demonstration.  The final presentation should be approximately 20 minutes.  Students should begin coding and producing basic solutions to challenge problems early in the course to facilitate creation of the final presentation.} \\
+\textit{\textbf{ADA Statement on Disability Services}: Whittier College is committed to make learning experiences as accessible as possible. If you experience physical or academic barriers due to a disability, you are encouraged to contact Student Disability Services (SDS) to discuss options. To learn more about academic accommodations, email disabilityservices@whittier.edu, call (562) 907-4825, or go to SDS which is located on the ground floor of Wardman Library.} \\
+\textit{\textbf{Academic Honesty Policy}: \url{http://www.whittier.edu/academics/academichonesty}} \\
 \textit{\textbf{Course Objectives}:}
 \begin{itemize}
-\item To develop an understanding of the underlying order within theoretical physics
-\item To master mathematical physics techniques
-\item To develop the ability to apply electromagnetic theory in fields that share similar concepts
-\item To appreciate and wield symmetry when constructing mathematical and physical arguments
-\item To model complex systems with numerical simulation code
-\item To practice developing a shared scientific understanding of scientific results within a small group
+\item To master the application of physical units, taking limits, and symmetry in physics
+\item To master techniques in mathematical physics and CEM and apply them to theoretical physics and engineering
+\item To use active learning techniques like directed warm-up exercises, peer learning, simulations, and student-designed final projects to build a better understanding of electrodynamics
 \end{itemize}
+\clearpage
+\twocolumn
 \textit{\textbf{Course Outline}:}
 \begin{outline}[enumerate]
-\1 \textbf{Unit 1: Math bootcamp}
-\2 Vectors
-\2 Vector calculus
-\2 Vector fields
-\2 \textit{Reading: Chapter 1}
-\1 \textbf{Unit 2: Electrostatics}
-\2 $\vec{E}$-fields and the divergence and curl of $\vec{E}$-fields
-\2 Electric Potential, Work and Energy
+\1 \textbf{Vector Analysis, Chapter 1}
+\2 Vector algebra
+\2 Differential calculus in three dimensions
+\2 Integral calculus in three dimensions
+\2 Cylindrical and spherical coordinate systems
+\2 The Dirac Delta function
+\2 Theory of vector fields
+\1 \textbf{Electrostatics, Chapter 2}
+\2 The electric field
+\2 Divergence and curl of electrostatic fields
+\2 Electric potential
+\2 Work and energy in electrostatics
 \2 Conductors
-\2 \textit{Reading: Chapter 2}
-\1 \textbf{Unit 3: Potentials}
-\2 Laplace's Equation
-\2 Separation of variables and Multipole Expansions
-\2 \textit{Reading: Chapter 3 (omit 3.2)}
-\1 \textbf{Unit 4: Electric Fields in Matter}
-\2 Polarized atoms in materials
-\2 $\vec{D}$-fields and linear media, part I
-\2 \textit{Reading: Chapter 4}
-\1 \textbf{Unit 5: Magnetostatics and Magnetic Fields in Matter}
-\2 Lorentz-force and the Biot-Savart Law, $\vec{B}$-fields
-\2 Divergence and curl of $\vec{B}$-fields
-\2 Magnetization and the auxiliary $\vec{H}$-field
-\2 Linear media, part II
-\2 \textit{Reading: Chapter 5, and 6 (omit 6.4)}
-\1 \textbf{Unit 6: Electrodynamics}
-\2 EMF, and induction
-\2 Maxwell's Equations
-\2 \textit{Reading: Chapter 7}
-\1 \textbf{Unit 7: Review}
-\2 Special topics: numerical simulation of Maxwell's Equations with MEEP
-\2 Connection to special relativity
-\2 \textbf{Preparation of final projects}
-\3 The final project will be given in the form of a presentation to the rest of the class
-\3 The final project can be either a theoretical exercise from the book or other source, or a numerical simulation that demonstrates a specific effect
-\3 Theoretical final projects should be an explanation of how to do a particularly interesting or difficult calculation
-\3 Numerical final projects will involve computational electromagnetism (CEM) simulations
-\3 Format: 15 minutes plus questions, submit as PDF file via Moodle
-\3 Graded on clarity, correctness, and technical difficulty (equal parts)
-\end{outline}
-\textbf{Important due Dates}
-\begin{outline}
-\1 Midterm: Distributed March 18th, 2022.  The midterm is take-home style, and open-book.  The midterm is due no later than March 21st, 2022 by the end of the day.  The midterm should be submitted on Moodle as a PDF file.
-\1 Final Project Proposal: A 1-paragraph document proposing the project or calculation to be performed.  The proposal should be submitted as a PDF file on Moodle.  The proposal is due March 28th, 2022 by the end of the day.
-\1 Final Project Presentations: We will hold final project presentations on May 11th and May13th, 2022.  Presentations should be 12-15 minutes plus time for questions.
+\1 \textbf{Potentials, Chapter 3}
+\2 Laplace's equation
+\2 The method of images
+\2 Separation of variables
+\2 Multipole expansion
+\1 \textbf{Electric Fields in Matter, Chapter 4}
+\2 Polarization
+\2 The field of a polarized object
+\2 The electric displacement
+\2 Linear dielectrics
+\1 \textbf{Magnetostatics, Chapter 5}
+\2 The Lorentz force law
+\2 The Biot-Savart law
+\2 The divergence and curl of magnetic fields
+\2 Magnetic vector potential
+\1 \textbf{Magnetic Fields in Matter, Chapter 6}
+\2 Magnetization
+\2 The field of a magnetized object
+\2 The auxiliary field
+\2 Linear and non-linear media
+\1 \textbf{Electrodynamics, Chapter 7}
+\2 The electromotive force
+\2 Electromagnetic induction
+\2 Maxwell's equations
+\2 The field of a rotating magnet
+\1 \textbf{Computational Electromagnetism, CEM}
+\2 The finite-difference time-domain (FDTD) technique
+\2 Defining boundary conditions in two and three dimensions
+\2 Defining radiating sources
+\2 Examples and applications
+\3 Simple waveguides and coaxial cables
+\3 Fiber optic couplers
+\3 Radio-frequency (RF) phased arrays
+\3 CEM enhanced with machine learning techniques
+\3 Introduction to the Naval Engineering Education Consortium (NEEC) research at Whittier Collge and NSWC Corona
 \end{outline}
 \end{document}
 
