@@ -5,7 +5,7 @@
 \usepackage[a4paper, total={18cm, 27cm}]{geometry}
 \usepackage{outlines}
 \usepackage{hyperref}
-
+\usepackage{graphicx}
 \begin{document}
 \maketitle
 
@@ -23,17 +23,17 @@ This course provides a rigorous exploration of classical electrodynamics, includ
 \textit{\textbf{Late work policy}: Late work is generally not accepted, but is left to the discretion of the instructor.} \\
 \textit{\textbf{Text}: Introduction to Electrodynamics, 5th ed. by D. Griffiths - \url{
 https://doi.org/10.1017/9781009397735}}. \\
-\textit{\textbf{Grading}: In-class warm-up exercises are marked only for attendance, and worth 10 percent of the grade.  Weekly homework sets are intented to be challenging, and student collaboration is expected.  Two short, open-book midterm exams will be completed outside of class.  There is no final exam for the course.  A final project and class presentation will be completed near the end of the semester.  See Tab. \ref{tab:grading}.}
+\textit{\textbf{Grading}: In-class warm-up exercises are marked only for attendance.  Weekly homework sets are intended to be challenging, and student collaboration is expected.  Two short, open-book midterm exams will be completed outside of class.  There is no final exam for the course.  A final project and class presentation will be completed near the end of the semester.  See Tab. \ref{tab:grading}.}
 \begin{table}
 \centering
 \begin{tabular}{| c | c | c | c |}
 \hline
 \textbf{Assignment} & \textbf{Weight} & \textbf{Assigned} & \textbf{Due}\\ \hline
-Problem Sets & 40\% & Altenate Fridays & Two weeks after assigned \\ \hline
-Midterm 1 & 15\% & Friday, December 5th, 2025 & Monday, December 8th, 2025 \\ \hline
-Midterm 2 & 15\% & Friday, December 5th, 2025 & Monday, December 8th, 2025 \\ \hline
-Final Project Proposal & 10\% & Friday, October 31st, 2025 & Friday, November 7th, 2025 \\ \hline
-Final Project Presentation & 20\% & Friday, October 31st, 2025 & Thursday, December 4th, 2025 \\ \hline
+Problem Sets & 40\% & See outline (next page) & Two weeks after assigned \\ \hline
+Midterm 1 & 15\% & Friday, October 3rd, 2025 & Monday, October 6th, 2025 \\ \hline
+Midterm 2 & 15\% & Friday, November 14th, 2025 & Monday, November 17th, 2025 \\ \hline
+Final Project Proposal & 10\% & Friday, November 17th, 2025 & Friday, November 21st, 2025 \\ \hline
+Final Project Presentation & 20\% & Friday, November 21st, 2025 & Thursday, December 4th, 2025 \\ \hline
 \end{tabular}
 \caption{\label{tab:grading} Assignments for Electromagnetic Theory (PHYS330).}
 \end{table} \\
@@ -58,47 +58,81 @@ Final Project Presentation & 20\% & Friday, October 31st, 2025 & Thursday, Decem
 \2 Cylindrical and spherical coordinate systems
 \2 The Dirac Delta function
 \2 Theory of vector fields
+\2 \textit{Homework 1, assigned August 22nd}
 \1 \textbf{Electrostatics, Chapter 2}
 \2 The electric field
 \2 Divergence and curl of electrostatic fields
 \2 Electric potential
 \2 Work and energy in electrostatics
 \2 Conductors
+\2 \textit{Homework 1, due September 5th}
+\2 \textit{Homework 2, assigned September 5th}
 \1 \textbf{Potentials, Chapter 3}
 \2 Laplace's equation
 \2 The method of images
 \2 Separation of variables
 \2 Multipole expansion
+\2 \textit{Homework 2, due September 19th}
+\2 \textit{Homework 3, assigned September 19th}
 \1 \textbf{Electric Fields in Matter, Chapter 4}
 \2 Polarization
 \2 The field of a polarized object
 \2 The electric displacement
 \2 Linear dielectrics
+\2 \textit{Homework 3, due October 3rd}
+\1 \textbf{Midterm 1, Chapters 1-4}
+\2 Assigned Friday, October 3rd
+\2 Due Monday, October 6th
+\2 Open-book, open-note
+\2 Completed individually
+\2 Submit in PDF form
 \1 \textbf{Magnetostatics, Chapter 5}
 \2 The Lorentz force law
 \2 The Biot-Savart law
 \2 The divergence and curl of magnetic fields
 \2 Magnetic vector potential
+\2 \textit{Homework 4, assigned October 6th}
 \1 \textbf{Magnetic Fields in Matter, Chapter 6}
 \2 Magnetization
 \2 The field of a magnetized object
 \2 The auxiliary field
 \2 Linear and non-linear media
+\2 \textit{Homework 4, due October 17th}
+\2 \textit{Homework 5, assigned October 17th}
 \1 \textbf{Electrodynamics, Chapter 7}
 \2 The electromotive force
 \2 Electromagnetic induction
 \2 Maxwell's equations
 \2 The field of a rotating magnet
-\1 \textbf{Computational Electromagnetism, CEM}
-\2 The finite-difference time-domain (FDTD) technique
+\2 \textit{Homework 5, due October 31st}
+\2 \textit{Homework 6, assigned October 31st}
+\1 \textbf{Computational Electromagnetism Part 1}
+\2 The finite-difference time-domain (FDTD) \\ technique
 \2 Defining boundary conditions in two and three dimensions
 \2 Defining radiating sources
-\2 Examples and applications
-\3 Simple waveguides and coaxial cables
-\3 Fiber optic couplers
-\3 Radio-frequency (RF) phased arrays
-\3 CEM enhanced with machine learning techniques
-\3 Introduction to the Naval Engineering Education Consortium (NEEC) research at Whittier Collge and NSWC Corona
+\2 Examples: point sources and waveguides
+\2 \textit{Homework 6, due November 14th}
+\1 \textbf{Midterm 2, Chapters 5-7}
+\2 Assigned Friday, November 14th 
+\2 Due Monday, November 17th 
+\2 Open-book, open-note
+\2 Completed individually
+\2 Submit in PDF form
+\1 \textbf{Computational Electromagnetism Part 2}
+\2 Coaxial cables
+\2 Fiber optic couplers
+\2 Radio-frequency (RF) phased arrays
+\2 CEM enhanced with machine learning techniques
+\2 Introduction to CEM research at \\ Whittier College
+\3 Research publications
+\3 The Naval Engineering Education Consortium (NEEC) grant
+\3 Educational Partnership Agreement (EPA) internships
+\2 \textit{Homework 7, assigned November 17th}
+\2 \textit{Homework 7, due November 21st}
 \end{outline}
+\begin{figure}[hb]
+\centering
+\includegraphics[width=0.4\textwidth,trim=0cm 0.5cm 0.5cm 0cm,clip=true]{dipole.jpg}
+\end{figure}
 \end{document}
 
