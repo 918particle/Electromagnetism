@@ -1,0 +1,56 @@
+\documentclass[10pt]{article}
+\usepackage{graphicx}
+\usepackage[margin=1.0cm]{geometry}
+\usepackage{amsmath}
+\usepackage{verbatim}
+\usepackage{hyperref}
+\def\brcurs{{\mbox{$\resizebox{.16in}{.08in}{\includegraphics{BoldR}}$}}}
+\def\rcurs{{\mbox{$\resizebox{.16in}{.08in}{\includegraphics{ScriptR}}$}}}
+
+\begin{document}
+
+\title{Tuesday Code Lab: Getting Started with MEEP}
+\author{Prof. Jordan C. Hanson}
+
+\maketitle
+
+\section{The Linux Terminal}
+
+For these CEM exercises, we will be using the \verb+Pop_Os+ operating system, a linux distribution.  The terminal is an application that gives us ``command line'' access to the operating system.  Examples of commands include \verb+ls+ (list files in current directory), and \verb+cd+ (change directories).  The power of the linux terminal is best demonstrated by demonstrating how quickly and efficiently we can use it to download and install software.  In this example, we will use the terminal to download and install the Miniconda package manager.  Open a terminal instance by hitting the super key, and copy and past the following into the terminal:
+\begin{verbatim}
+mkdir -p ~/miniconda3
+wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O ~/miniconda3/miniconda.sh
+bash ~/miniconda3/miniconda.sh -b -u -p ~/miniconda3
+rm ~/miniconda3/miniconda.sh
+\end{verbatim}
+\noindent
+The code above is an example of a \textit{bash script}.  Bash stands for born-again shell, and a shell programing language allows us to write scripts that control the operating system.  The script creates a directory (\verb+miniconda3+), downloads the miniconda installation script script from \verb+repo.anaconda.com+, runs it, and removes the installation script.
+
+\section{The Conda Environment Manager}
+
+If the code above was successful, the terminal should read \verb+(base)+ at the far left. This indicates we are in the base \verb+conda+ environment, with standard Python3.  We will now create a special environment in which we will install PyMeep, to enable use of MEEP with the Python3 interface.  Copy and paste the following code into the terminal and run it:
+
+\begin{verbatim}
+conda create -n mp -c conda-forge pymeep
+\end{verbatim}
+\noindent
+The code will do two things: (1) create an environment named \verb+mp+, and (2) install PyMeep into that environment the PyMeep package.  The benefit of separate conda environments is that they act as closed sandboxes in which new software packages and code may be installed without interfering with other projects.
+
+\section{MEEP: MIT Electromagnetic Equation Propagator}
+
+Hit the super key and type Firefox to open a browser.  Next, search for MEEP ReadTheDocs, a site with many useful tutorials in the Python3 interface.  Locate the Tutorial/Basics page in the left pane, below Python3 interface\footnote{\url{https://meep.readthedocs.io/en/master/Python_Tutorials/Basics}}.  Follow the instructions to create a Python3 script that will model a straight waveguide with an AC source at the left end.  We must copy the neccessary Python3 code into a text file in order to run it on the command line.  The Sublime Text editor is already installed on your systems.  To open it, hit the super key and type Sublime.  To run a Python3 script named \verb+example.py+ on the command line, type \verb+python3 example.py+.  The opening lines of our first MEEP script look like this:
+
+\begin{verbatim}
+import meep as mp
+cell = mp.Vector3(16,8,0)
+geometry = [mp.Block(mp.Vector3(mp.inf,1,mp.inf),center=mp.Vector3(),material=mp.Medium(epsilon=12))]
+pml_layers = [mp.PML(1.0)]
+sim = mp.Simulation(
+    cell_size=cell,
+    boundary_layers=pml_layers,
+    geometry=geometry,
+    sources=sources,
+    resolution=resolution)
+\end{verbatim}
+
+\end{document}
